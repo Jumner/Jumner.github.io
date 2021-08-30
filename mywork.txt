@@ -1,0 +1,24 @@
+this is a wip as I try to remember events and dates
+
+July 2013 : learned js so I could make minecraft mods (yes, really)
+For the next year I messed around with the html canvas, keyboard input, and basic movement/physics
+made a very primitive game where you could walk around and collide with the edge of the screen
+showed my grandfather the game and he became my helpline as he also does web design
+June 2014 : messed around with creating ai (really just a bunch of if statements)
+late 2014 - early 2015 : built a simple website/game for school where you are godzilla and you can click on towers to destroy them. here I learnt basic dom stuff
+august 2014 : tried to make my own 3d engine and then immediately game up and experimented with three.js because 2d was boring. Spoiler alert, all I did was spin a cube and give up
+
+august 2015 : built my own computer (and didnt break it!)
+
+December 2016 : Made a gambling simulator math class in c#. It was fun. I think I then wrote a program that always profits but it has infinite money.
+September 2017 : Added bullet physics which taught me about treating mouse position as a vector and normalizing it to get direction and then firing the bullet
+April 2017 : made a very bad website which had a collection of mini projects such as a calculator, program that finds factors, "fibnachi" finder, parabola focus finder, password strength detector, various pi calculators, prime number finders, sphere surface area and volume calc, 
+April 2017 : launched calcgalore which was my website with a variety of calculators it calculates pi, phi, e, a 20x20 square of random colors that "looks cool", parabola plotter, bubble sorter with visuals, parabola focus finder, fibonachi numbers, prime number calculator, factorizer, pythagorean theorem, fraction addition, password strength finder, fraction simplifier, script timer, hot sauce roulette, adds numbers using virtual logic gates, probability visualization
+June 2017 : built a game with physics, working collisions, animations, a level editor, and basic ui. I also learned github with this one
+2018 : learned c++
+2018 : tried to make a ray tracer but it didnt go far
+2018 : made a space sim to attempt to do 2d rocket landings
+2018 : learned about how neural networks work and actually made a working weird kind that used the sigmoid function and was able to learn the xor gate
+
+Made a program that turns off my computer at 9
+Made a program that connects to the google api to get current projects and if there is a project that is not completed, distractions are removed
