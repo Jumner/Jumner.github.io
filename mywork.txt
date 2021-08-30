@@ -10,6 +10,7 @@ august 2014 : tried to make my own 3d engine and then immediately game up and ex
 
 august 2015 : built my own computer (and didnt break it!)
 
+January 2016 : Learned c# and made a simple tick tac toe game with it.
 December 2016 : Made a gambling simulator math class in c#. It was fun. I think I then wrote a program that always profits but it has infinite money.
 September 2017 : Added bullet physics which taught me about treating mouse position as a vector and normalizing it to get direction and then firing the bullet
 April 2017 : made a very bad website which had a collection of mini projects such as a calculator, program that finds factors, "fibnachi" finder, parabola focus finder, password strength detector, various pi calculators, prime number finders, sphere surface area and volume calc, 
@@ -19,6 +20,11 @@ June 2017 : built a game with physics, working collisions, animations, a level e
 2018 : tried to make a ray tracer but it didnt go far
 2018 : made a space sim to attempt to do 2d rocket landings
 2018 : learned about how neural networks work and actually made a working weird kind that used the sigmoid function and was able to learn the xor gate
-
-Made a program that turns off my computer at 9
-Made a program that connects to the google api to get current projects and if there is a project that is not completed, distractions are removed
+early 2019 : Made a program that turns off my computer at 9
+July 2019 : Made a program that connects to the google api to get current projects and if there is a project that is not completed, distractions are removed
+December 2019 : Learned a bit of unity to make mods for a game
+early 2020 : Actually learned how 3d graphics work with matrix multiplications
+early 2020 : Made a wireframe 3d engine with c++
+mid 2020 : Made a similar thing with Turing
+December 2020 : Made a game with unity to try and replicate the control system of starship, it was very complex
+May 2021 : Made a extension for vscode that adds a ton of support for the language Turing

@@ -117,8 +117,25 @@ div#aboutcontainer > div.wrapper + div.wrapper {
 	background-color: orange;
 }
 
-canvas#timeline {
+div#projects {
+	width: 100%;
+	height: 100%;
+	display: table;
 	background-color: white;
+}
+
+div#projects > div.project-row {
+	display: table-row;
+}
+
+div#projects > div.project-row > div.project-cell {
+	display: table-cell;
+	position: relative;
+}
+
+div.project-card {
+	background-color: blue;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 }

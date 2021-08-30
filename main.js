@@ -25,23 +25,47 @@ window.onload = () => {
 		}
 	};
 
-	// Timeline handling
-	let tlCanvas = document.getElementById('timeline');
-	let size = { x: tlCanvas.clientWidth, y: tlCanvas.clientHeight };
-	tlCanvas.width = size.x;
-	tlCanvas.style.width = size.x + 'px';
-	tlCanvas.height = size.y;
-	tlCanvas.style.height = size.y + 'px';
-	let ctx = tlCanvas.getContext('2d');
-	ctx.imageSmoothingEnabled = false;
-
-	ctx.fillRect(0, 0, 100, 100);
-	console.log(size);
-
 	// Date handling
 	let years = document.getElementById('timecoding');
 	let now = new Date();
 	let start = new Date('July 1, 2013'); // Not an exact date but I learned in the summer and have emails with my awesome grandpa from early 2014
 	let diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
 	years.innerHTML = Math.floor(diff);
+
+	// Project handling
+	let container = document.getElementById('projects');
+	let cells = [];
+	for (let y = 0; y < 3; y++) {
+		let row = document.createElement('div');
+		row.className = 'project-row';
+		container.appendChild(row);
+		for (let x = 0; x < 3; x++) {
+			let cell = document.createElement('div');
+			let card = document.createElement('div');
+			cell.className = 'project-cell';
+			card.className = 'project-card';
+			cell.style.backgroundColor = 'rgb(255,' + 25 * (x * 3 + y) + ',0)';
+			cell.on = true;
+			cell.appendChild(card);
+			flip(cell);
+			cell.onmouseenter = e => {
+				e.target.on = false;
+				clearTimeout(e.target.timeout);
+			};
+			cell.onmouseleave = e => {
+				e.target.on = true;
+				flip(e.target);
+			};
+			row.appendChild(cell);
+			cells.push(cell);
+		}
+	}
 };
+
+function flip(cell) {
+	cell.timeout = setTimeout(() => {
+		if (!cell.on) return;
+		cell.children[0].innerHTML += 'f';
+		flip(cell);
+	}, 3000 + 5000 * Math.random());
+}
