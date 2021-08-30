@@ -1,11 +1,18 @@
+/* Colours */
+/* https://coolors.co/8aea92-80ada0-5f5566-33202a-000000 */
+/* https://coolors.co/fffcf2-ccc5b9-403d39-252422-eb5e28 */
+
+/* General */
+
 * {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
 
-div.container {
-	background-color: orange;
+a {
+	text-decoration: none;
+	color: black;
 }
 
 div.page {
@@ -13,52 +20,80 @@ div.page {
 	width: 100%;
 }
 
-div.header.container {
+/* Header */
+
+div#sticky {
 	position: sticky;
 	top: 0;
 }
 
-div.header > div#stickyContainer {
-	background-color: aqua;
+div#sticky > div#stickyContainer {
+	background-color: #1f261f;
+	position: absolute; /* so it wont take space */
 	display: table;
-	position: absolute;
-	top: 0;
 	width: 100%;
 }
 
-div#stickyContainer > div.wrapper {
-	background-color: blueviolet;
+/* Name */
+
+div#stickyContainer > div#namewrapper {
 	display: table-cell;
 	vertical-align: middle;
-	width: 10%;
+	width: 150px;
 	min-width: 150px;
 }
-div#stickyContainer > div.wrapper > p {
-	text-align: left;
-	margin-left: 30px;
-	top: 0;
+div#namewrapper > p {
+	text-align: center;
+	color: #8aea92;
+	font-weight: bolder;
 }
+
+/* Buttons */
 
 div#buttonContainer {
 	display: table;
-	background-color: chartreuse;
 	float: right;
-	width: 40%;
 }
 div#buttonContainer > div.wrapper {
 	display: table-cell;
 }
 
-div#buttonContainer > div > p > a {
-	text-align: center;
+div#buttonContainer > div.wrapper > p > a {
 	display: block;
-	border-radius: 10px;
-	border: 1px solid black;
-	padding: 5px;
-	margin: 5px;
+	color: #8aea92;
+	padding: 8px 18px;
+	font-weight: bolder;
 }
 
-a {
-	text-decoration: none;
-	color: black;
+/* Page 1 - Home */
+/* Text box */
+
+div#hometext {
+	background-color: #1f261f;
+	position: absolute;
+	margin-top: 189px;
+	margin-left: 150px;
+	border-radius: 40px;
 }
+
+div#hometext > * {
+	margin: 30px;
+	color: #8aea92;
+}
+
+div#hometext > h1 {
+	font-size: 80px;
+}
+
+div#hometext > h2 {
+	font-size: 40px;
+}
+
+div#hometext > p {
+	font-size: 20px;
+}
+
+/* Page 2 - About Me */
+/* Page 3 - Qualifications */
+/* Page 4 - My Work */
+/* Page 5 - Contact Me */
