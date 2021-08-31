@@ -1,6 +1,6 @@
 // My Javascript!
 // let pageColours = ['linear-gradient(-45deg, #1f261f, #95af95)', '#ffffff'];
-let pageColours = ['#ffffff', '#ffffff', '#ffffff', '#ffffff'];
+let pageColours = ['#ffffff', '#ffffff', '#ffffff'];
 
 Array.prototype.random = function () {
 	// Python has corrupted me
