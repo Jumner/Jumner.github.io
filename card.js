@@ -27,6 +27,10 @@ class card {
 		card.appendChild(bot);
 		return card;
 	}
+
+	get html() {
+		return this.element.outerHTML;
+	}
 }
 
 let cards = [

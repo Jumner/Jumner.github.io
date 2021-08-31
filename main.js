@@ -60,16 +60,23 @@ window.onload = () => {
 			};
 			row.appendChild(cell);
 			cells.push(cell);
-			cell.child;
 		}
 	}
 };
 
 function flip(cell) {
 	cell.timeout = setTimeout(() => {
-		if (!cell.on) return;
+		if (!cell.on) return; // Make sure it wont flip if being hovered
+		let oldHtml = cell.innerHTML;
 		cell.innerHTML = ''; // Clear past card
-		cell.appendChild(cards.random().element);
+		cell.appendChild(
+			cards
+				.filter(card => {
+					return oldHtml !== card.html; // filter out the same card so no repeats
+				})
+				.random().element
+		);
 		flip(cell);
 	}, 5000 + 15000 * Math.random());
+	// }, 1000);
 }
