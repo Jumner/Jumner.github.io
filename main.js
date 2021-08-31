@@ -2,6 +2,11 @@
 // let pageColours = ['linear-gradient(-45deg, #1f261f, #95af95)', '#ffffff'];
 let pageColours = ['#ffffff', '#ffffff', '#ffffff'];
 
+Array.prototype.random = function () {
+	// Python has corrupted me
+	return this[Math.floor(Math.random() * this.length)];
+};
+
 window.onload = () => {
 	// Wait for page to load
 	let pages = document.getElementsByClassName('page'); // Grab all the pages
@@ -35,19 +40,16 @@ window.onload = () => {
 	// Project handling
 	let container = document.getElementById('projects');
 	let cells = [];
-	for (let y = 0; y < 3; y++) {
+	for (let y = 0; y < 2; y++) {
 		let row = document.createElement('div');
 		row.className = 'project-row';
 		container.appendChild(row);
 		for (let x = 0; x < 3; x++) {
 			let cell = document.createElement('div');
-			let card = document.createElement('div');
 			cell.className = 'project-cell';
-			card.className = 'project-card';
-			cell.style.backgroundColor = 'rgb(255,' + 25 * (x * 3 + y) + ',0)';
+			cell.appendChild(cards.random().element);
 			cell.on = true;
-			cell.appendChild(card);
-			flip(cell);
+			flip(cell); // enables flipping
 			cell.onmouseenter = e => {
 				e.target.on = false;
 				clearTimeout(e.target.timeout);
@@ -58,6 +60,7 @@ window.onload = () => {
 			};
 			row.appendChild(cell);
 			cells.push(cell);
+			cell.child;
 		}
 	}
 };
@@ -65,7 +68,8 @@ window.onload = () => {
 function flip(cell) {
 	cell.timeout = setTimeout(() => {
 		if (!cell.on) return;
-		cell.children[0].innerHTML += 'f';
+		cell.innerHTML = ''; // Clear past card
+		cell.appendChild(cards.random().element);
 		flip(cell);
-	}, 3000 + 5000 * Math.random());
+	}, 5000 + 15000 * Math.random());
 }

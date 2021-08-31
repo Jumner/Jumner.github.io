@@ -121,7 +121,6 @@ div#projects {
 	width: 100%;
 	height: 100%;
 	display: table;
-	background-color: white;
 }
 
 div#projects > div.project-row {
@@ -132,12 +131,59 @@ div#projects > div.project-row > div.project-cell {
 	display: table-cell;
 	position: relative;
 }
-
+/* cards */
 div.project-card {
-	background-color: blue;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	bottom: 5%;
+	left: 5%;
+	border-radius: 20px;
+	background-color: red;
+}
+
+div.project-card:hover {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+div.project-card > div {
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 50%;
+	border-radius: 20px;
+}
+
+div.project-card > div.card-top {
+	top: 0;
+	background-color: red;
+}
+
+div.project-card > div.card-bot {
+	top: 50%;
+	background-color: yellow;
+}
+div.project-cell:nth-child(2) > div.project-card > div.card-top {
+	top: 50%;
+}
+div.project-cell:nth-child(2) > div.project-card > div.card-bot {
+	top: 0;
+}
+
+p.project-date {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	font-size: 12px;
+}
+
+h1.project-desc {
+	position: absolute;
+	margin: 10px;
+	font-size: 15px;
 }
 
 /* Page 3 - Qualifications */
