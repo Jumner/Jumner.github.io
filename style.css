@@ -105,16 +105,31 @@ div#aboutcontainer {
 	height: 100%;
 }
 
-div#aboutcontainer > div.wrapper {
-	display: table-cell;
-	width: 50%;
-	height: 90%;
-	padding: 5% 5%;
-	background-color: red;
+h1.abouth1 {
+	font-size: 50px;
 }
 
-div#aboutcontainer > div.wrapper + div.wrapper {
-	background-color: orange;
+div#aboutcontainer > div.section > div.wrapper {
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+	right: 50%;
+}
+
+div#aboutcontainer > div.section > div.wrapper > p {
+	font-size: 28px;
+}
+
+div#aboutcontainer > div.section {
+	display: table-cell;
+	position: relative;
+	width: 50%;
+	height: 90%;
+}
+
+div#aboutcontainer > div.section + div.section {
+	padding: 5% 5%;
 }
 
 div#projects {
@@ -186,6 +201,5 @@ h1.project-desc {
 	font-size: 15px;
 }
 
-/* Page 3 - Qualifications */
-/* Page 4 - My Work */
-/* Page 5 - Contact Me */
+/* Page 3 - My Work */
+/* Page 4 - Contact Me */
