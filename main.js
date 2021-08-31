@@ -1,6 +1,6 @@
 // My Javascript!
 // let pageColours = ['linear-gradient(-45deg, #1f261f, #95af95)', '#ffffff'];
-let pageColours = ['#ffffff', '#ffffff', '#ffffff'];
+let pageColours = ['#ffffff', '#ffffff', '#ffffff', '#ffffff'];
 
 Array.prototype.random = function () {
 	// Python has corrupted me
@@ -79,4 +79,15 @@ function flip(cell) {
 		flip(cell);
 	}, 5000 + 15000 * Math.random());
 	// }, 1000);
+}
+
+function contactSubmit() {
+	let inputs = ['firstname', 'lastname', 'contactinfo', 'message'];
+	inputs = inputs.map(input => {
+		let inp = document.getElementById(input);
+		let value = inp.value;
+		inp.value = '';
+		return value; // Map the values onto the ids
+	});
+	console.log(inputs); // Well handle this later
 }

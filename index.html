@@ -65,7 +65,21 @@
 				</div>
 			</div>
 			<div id="mywork" class="page">mywork</div>
-			<div id="contact" class="page">contact</div>
+			<div id="contact" class="page">
+				<div id="formwrapper">
+					<form action="javascript: contactSubmit();">
+						<label for="firstname" class="row1">First Name</label>
+						<label for="lastname" class="row1">Last Name</label>
+						<label for="contactinfo" class="row1">Contact</label>
+						<input type="text" name="firstname" id="firstname" />
+						<input type="text" name="lastname" id="lastname" />
+						<input type="text" name="contactinfo" id="contactinfo" />
+						<label for="message" id="messagelabel">Message</label>
+						<textarea name="message" id="message" rows="5"></textarea>
+						<input type="submit" value="submit" id="submit" />
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

@@ -203,3 +203,62 @@ h1.project-desc {
 
 /* Page 3 - My Work */
 /* Page 4 - Contact Me */
+
+div#formwrapper {
+	background-color: coral;
+	position: relative;
+}
+
+div#formwrapper > form {
+	display: grid;
+	/* gap: 15px; */
+	padding: 1%;
+	position: absolute;
+	background-color: darkred;
+}
+
+form > input,
+form > textarea {
+	margin: 10px;
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+
+form > label.row1 {
+	grid-row: 1;
+	padding-left: 10px;
+}
+
+input#firstname,
+input#lastname,
+input#contactinfo {
+	grid-row: 2;
+}
+
+form > label#messagelabel {
+	grid-row: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	text-align: center;
+}
+
+form > textarea#message {
+	resize: none;
+	grid-row: 4;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+form > input#submit {
+	grid-row: 5;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+/* form > input#submit,
+form > input#message {
+	position: relative;
+	position: absolute;
+	width: 100%;
+} */
