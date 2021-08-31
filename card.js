@@ -171,7 +171,7 @@ let cards = [
 	),
 	new card(
 		'May 2021',
-		"I made an extension for a code editor called Vscode which adds support for a language called Turing. It wasn't perfect, but it was about as close as I could get.",
+		"I made an extension for a code editor called Vscode. It adds support for a language called Turing. It wasn't perfect, but it was about as close as I could get.",
 		'src'
 	),
 ];
