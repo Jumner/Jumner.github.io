@@ -165,6 +165,11 @@ let cards = [
 		'src'
 	),
 	new card(
+		'November 2020',
+		'I learned how modular linux can be. I always loved development in linux and I never realized that it can look nicer than windows. I now use it for almost everything.',
+		'src'
+	),
+	new card(
 		'December 2020',
 		"I made a game with the unity game engine and though it was not super functional, it taught me a lot about learning to make games when I don't have full control.",
 		'src'
