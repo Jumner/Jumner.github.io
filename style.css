@@ -220,18 +220,13 @@ div#contact > div.wrapper {
 div#textwrapper {
 	position: absolute;
 	display: grid;
-	height: 100%;
-	width: 50%;
-	left: 50%;
-	top: 0;
-}
-
-div#textwrapper > div.contact {
-	margin: 10px;
+	bottom: 0;
+	right: 3%;
+	left: 53%;
+	top: 10%;
 }
 
 div#textwrapper > div.contact.header {
-	padding: 20px;
 	grid-row: 1;
 	grid-column: 1 / span 2;
 }
@@ -277,8 +272,8 @@ div#formwrapper {
 	background-color: coral;
 	position: absolute;
 	bottom: 10%;
-	left: 10%;
-	right: 10%;
+	left: 5%;
+	right: 5%;
 	top: 10%;
 }
 
