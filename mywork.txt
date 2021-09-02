@@ -30,3 +30,9 @@ early 2020 : Made a wireframe 3d engine with c++
 mid 2020 : Made a similar thing with Turing
 December 2020 : Made a game with unity to try and replicate the control system of starship, it was very complex
 May 2021 : Made a extension for vscode that adds a ton of support for the language Turing
+
+big projects:
+Turing vscode
+this site
+Cubic
+dowork
