@@ -222,37 +222,27 @@ div.work-item > div.wrapper {
 	background-color: #8aea92;
 	left: 0;
 	right: 0;
-	top: 0;
 	height: 100%;
-	position: relative;
-	display: grid;
-	grid-template-areas:
-		'head head'
-		'content  space';
-	grid-template-rows: min-content 1fr 0; /* this is wack */
-	gap: 20px;
-	padding: 20px;
-	/* padding: 2%; */
+	position: absolute;
 }
 
-div.work-item > div.wrapper:hover {
-	/* padding: 1%; */
-}
-
-div.work-item > div.wrapper > div.header {
-	grid-area: head;
-	text-align: center;
-	background-color: red;
+div.work-item > div.wrapper > div {
+	position: absolute;
+	top: 0;
+	bottom: 20px;
+	/* width: 50%; */
 }
 
 div.work-item > div.wrapper > div.content {
-	grid-area: content;
 	background-color: aqua;
+	left: 20px;
+	right: 50%;
 }
 
 div.work-item > div.wrapper > div.space {
-	grid-area: space;
 	background-color: white;
+	right: 20px;
+	left: 50%;
 }
 
 /* Page 4 - Contact Me */

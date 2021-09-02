@@ -21,11 +21,6 @@ class project {
 		space.className = 'space';
 		space.innerHTML = 'space: ' + this.name;
 
-		let header = document.createElement('div');
-		header.className = 'header';
-		header.innerHTML = 'header: ' + this.name;
-
-		wrapper.appendChild(header);
 		wrapper.appendChild(content);
 		wrapper.appendChild(space);
 
