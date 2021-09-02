@@ -220,14 +220,39 @@ div.work-item {
 
 div.work-item > div.wrapper {
 	background-color: #8aea92;
-	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
 	height: 100%;
 	position: relative;
-	padding: 2%;
+	display: grid;
+	grid-template-areas:
+		'head head'
+		'content  space';
+	grid-template-rows: min-content 1fr 0; /* this is wack */
+	gap: 20px;
+	padding: 20px;
+	/* padding: 2%; */
 }
 
 div.work-item > div.wrapper:hover {
-	padding: 1%;
+	/* padding: 1%; */
+}
+
+div.work-item > div.wrapper > div.header {
+	grid-area: head;
+	text-align: center;
+	background-color: red;
+}
+
+div.work-item > div.wrapper > div.content {
+	grid-area: content;
+	background-color: aqua;
+}
+
+div.work-item > div.wrapper > div.space {
+	grid-area: space;
+	background-color: white;
 }
 
 /* Page 4 - Contact Me */
