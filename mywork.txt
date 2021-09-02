@@ -34,5 +34,4 @@ May 2021 : Made a extension for vscode that adds a ton of support for the langua
 big projects:
 Turing vscode
 this site
-Cubic
 dowork

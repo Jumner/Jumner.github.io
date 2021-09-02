@@ -19,6 +19,12 @@ window.onload = () => {
 				'rgb(255,' + Math.floor((i * 255) / (pages.length - 1)) + ',0)';
 		}
 	}
+	let mywork = document.getElementById('mywork');
+	projects.forEach(project => {
+		mywork.appendChild(project.element);
+	});
+	let contact = document.getElementById('contact');
+	contact.style.height = Math.round(window.innerHeight / 2) + 'px';
 	// Scroll handling
 	let nav = document.getElementById('buttonContainer');
 	window.onscroll = () => {

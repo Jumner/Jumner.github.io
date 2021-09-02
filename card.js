@@ -1,5 +1,3 @@
-let t = ['a', 'b', 'c'];
-
 class card {
 	constructor(date, description, img) {
 		this.date = date;
