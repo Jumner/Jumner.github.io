@@ -239,10 +239,20 @@ div.work-item > div.wrapper > div.content {
 	right: 50%;
 }
 
+div.work-item > div.wrapper.flipped > div.content {
+	right: 20px;
+	left: 50%;
+}
+
 div.work-item > div.wrapper > div.space {
 	background-color: white;
 	right: 20px;
 	left: 50%;
+}
+
+div.work-item > div.wrapper.flipped > div.space {
+	left: 20px;
+	right: 50%;
 }
 
 /* Page 4 - Contact Me */

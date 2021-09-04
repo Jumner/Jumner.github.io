@@ -1,3 +1,4 @@
+let flipped = false;
 class project {
 	constructor(name) {
 		this.name = name;
@@ -10,7 +11,8 @@ class project {
 
 		let wrapper = document.createElement('div');
 		wrapper.className = 'wrapper';
-		// wrapper.innerHTML = this.name;
+		if (flipped) wrapper.className += ' flipped'; // Flip every other one
+		flipped = !flipped;
 		project.appendChild(wrapper);
 
 		let content = document.createElement('div');
