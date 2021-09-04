@@ -237,6 +237,7 @@ div.work-item > div.wrapper > div.content {
 	background-color: aqua;
 	left: 20px;
 	right: 50%;
+	padding: 20px;
 }
 
 div.work-item > div.wrapper.flipped > div.content {
@@ -253,6 +254,26 @@ div.work-item > div.wrapper > div.space {
 div.work-item > div.wrapper.flipped > div.space {
 	left: 20px;
 	right: 50%;
+}
+
+/* content */
+
+div.work-item > div.wrapper > div.content > div.content-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+
+div.content-wrapper > h1 {
+	text-align: center;
+}
+
+div.content-wrapper > p {
+	font-size: 20px;
+}
+
+div.content-wrapper > ul {
+	padding-left: 20px; /* Offset list */
 }
 
 /* Page 4 - Contact Me */
