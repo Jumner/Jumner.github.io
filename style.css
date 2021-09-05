@@ -43,6 +43,15 @@ div.page {
 	background-color: #0cf574;
 }
 
+.svg {
+	/* app.haikei.app is amazing 😘 */
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 /* Header */
 
 div#sticky {
@@ -113,18 +122,9 @@ div#buttonContainer > div.wrapper > p > a:hover {
 
 /* Text box */
 
-.svg {
-	/* app.haikei.app is amazing 😘 */
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
-
 div#home {
 	/* Home page */
-	background-image: url('img/blob-scene-haikei.svg');
+	background-image: url('img/layered-waves-haikei-home.svg');
 }
 
 div#hometext {
@@ -166,6 +166,10 @@ div#hometext > p {
 }
 
 /* Page 2 - About Me */
+
+div#aboutme {
+	background-image: url('img/stacked-waves-haikei.svg');
+}
 
 div#aboutcontainer {
 	/* Holds all the about me text */
@@ -344,6 +348,7 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
+	background-image: url('img/blurry-gradient-haikei.svg');
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -463,6 +468,7 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
+	background-image: url('img/layered-waves-haikei-contact.svg');
 	background-color: #1a201a;
 	z-index: 5;
 	width: 100%;
