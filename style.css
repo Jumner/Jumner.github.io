@@ -5,10 +5,14 @@
 
 /* General */
 
+/* find unlabeled regex \{\n\s+[^/] */
+
 * {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+
+	transition: 0.2s all;
 }
 
 a {
@@ -123,6 +127,13 @@ div#hometext > * {
 	color: #1ccad8;
 }
 
+div#hometext h2:hover,
+div#hometext p:hover,
+div#hometext span:hover {
+	/* Main text hover */
+	color: #0cf574;
+}
+
 div#hometext > h1 {
 	/* Inner big */
 	font-size: 80px;
@@ -165,6 +176,51 @@ div#aboutcontainer > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
 	font-size: 28px;
 }
+
+/* images */
+
+div#aboutcontainer > div.section > div.pictures {
+	/* Picture container */
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	left: 50%;
+	right: 10%;
+}
+
+div.pictures > div.image {
+	/* Image container div */
+	position: absolute;
+	background-color: #1ccad8;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+div.pictures > div.image:hover {
+	/* Image container div hover */
+	background-color: #0cf574;
+	padding: 2px;
+}
+
+div.pictures > div.image:hover > img {
+	/* Image wrapper div hover */
+	border-radius: 4px;
+}
+
+div.image:nth-child(2) {
+	/* Second image */
+	bottom: 0;
+}
+
+div.pictures > div.image > img {
+	/* Images about me */
+	display: block; /* Fixes weird border thing */
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+/* Not images */
 
 div#aboutcontainer > div.section {
 	/* the 2 sections */
@@ -219,6 +275,7 @@ div.project-card:hover {
 }
 
 div.project-card:hover > div.card-bot {
+	/* Bottom when card hover */
 	background-color: #0cf574;
 }
 
@@ -348,12 +405,10 @@ div.content-wrapper > div.info-wrapper {
 	color: #1ccad8;
 }
 
-/* div.content-wrapper > div > *:hover {
-	color: #0cf574;
-} */
-
-div.content-wrapper:hover > div > * {
-	/* All text of the content section hover */
+div.content-wrapper > div > h1:hover,
+div.content-wrapper > div > p:hover,
+div.content-wrapper > div li:hover {
+	/* Hover of each individual text element */
 	color: #0cf574;
 }
 
@@ -422,6 +477,12 @@ div#formwrapper > form {
 	right: 1%;
 }
 
+form h1:hover,
+form label:hover {
+	/* Form label and header hover */
+	color: #0cf574;
+}
+
 form > input,
 form > textarea {
 	/* The text boxes in the form */
@@ -447,6 +508,7 @@ form > label.row1 {
 
 form > label {
 	/* Form labels */
+	text-align: center;
 	margin-bottom: -20px;
 }
 
@@ -475,10 +537,12 @@ form > input#submit {
 	background-color: #0cf574;
 	grid-row: 6;
 	grid-column: 1 / span 2;
+	height: 50px;
 }
 
 form > input#submit:hover {
-	background-color: #1ccad8;
+	/* background-color: #1ccad8; */
+	box-shadow: inset 0 -50px 0 0 #1ccad8; /* very noice */
 }
 
 /* Text */
@@ -493,7 +557,14 @@ div#textwrapper {
 	top: 10%;
 }
 
+div#textwrapper h1:hover,
+div#textwrapper p:hover {
+	/* Text hovers */
+	color: #0cf574;
+}
+
 div#textwrapper > div.contact {
+	/* Default text colour */
 	color: #1ccad8;
 }
 

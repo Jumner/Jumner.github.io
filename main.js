@@ -88,7 +88,6 @@ function flip(cell) {
 		);
 		flip(cell);
 	}, 5000 + 15000 * Math.random());
-	// }, 1000);
 }
 
 function contactSubmit() {
