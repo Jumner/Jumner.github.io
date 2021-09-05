@@ -1,5 +1,5 @@
 /* Colours */
-/* Primary:   1f261f */
+/* Primary:   1a201a / 1f261f */
 /* Secondary: 1CCAD8 */
 /* Accent:    0CF574 */
 
@@ -31,7 +31,7 @@ div.page {
 }
 
 ::-webkit-scrollbar-track {
-	background: #1f261f;
+	background: #1a201a;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,8 +54,9 @@ div#sticky {
 
 div#sticky > div#stickyContainer {
 	/* The inside container for the header stuff */
-	background-color: #1f261f;
+	background-color: #1a201a;
 	color: #1ccad8;
+	opacity: 0.8;
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
@@ -112,16 +113,31 @@ div#buttonContainer > div.wrapper > p > a:hover {
 
 /* Text box */
 
-div#hometext {
-	/* contains welcome text */
-	background-color: #1f261f;
-	position: absolute;
-	top: 189px;
-	left: 150px;
-	border-radius: 20px;
+.svg {
+	/* app.haikei.app is amazing 😘 */
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-div#hometext > * {
+div#home {
+	/* Home page */
+	background-image: url('img/blob-scene-haikei.svg');
+}
+
+div#hometext {
+	/* contains welcome text */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+div#hometext h2,
+div#hometext p,
+div#hometext a {
 	/* All inner text */
 	margin: 30px;
 	color: #1ccad8;
@@ -129,7 +145,7 @@ div#hometext > * {
 
 div#hometext h2:hover,
 div#hometext p:hover,
-div#hometext span:hover {
+div#hometext a:hover {
 	/* Main text hover */
 	color: #0cf574;
 }
@@ -263,7 +279,7 @@ div.project-card {
 	bottom: 5%;
 	left: 5%;
 	border-radius: 20px;
-	background-color: #1f261f;
+	background-color: #1a201a;
 }
 
 div.project-card:hover {
@@ -285,7 +301,7 @@ div.project-card > div {
 	width: 100%;
 	height: 50%;
 	border-radius: 20px;
-	background-color: #1f261f;
+	background-color: #1a201a;
 }
 
 div.project-card > div.card-top {
@@ -297,7 +313,7 @@ div.project-card > div.card-bot {
 	/* The bottom section of the card */
 	top: 50%;
 	background-color: #1ccad8;
-	color: #1f261f;
+	color: #1a201a;
 }
 div.project-cell:nth-child(2) > div.project-card > div.card-top {
 	/* The flipped top section */
@@ -360,7 +376,7 @@ div.work-item > div.wrapper > div {
 
 div.work-item > div.wrapper > div.content {
 	/* The content section of the card */
-	background-color: #1f261f;
+	background-color: #1a201a;
 	left: 20px;
 	right: 50%;
 	padding: 20px;
@@ -447,7 +463,7 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
-	background-color: #1f261f;
+	background-color: #1a201a;
 	z-index: 5;
 	width: 100%;
 	height: 500px;
@@ -458,7 +474,7 @@ div#contact {
 
 div#formwrapper {
 	/* Holds the form */
-	background-color: #1f261f;
+	background-color: #1a201a;
 	color: #1ccad8;
 	position: absolute;
 	bottom: 10%;
