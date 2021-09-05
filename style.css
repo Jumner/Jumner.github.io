@@ -13,7 +13,6 @@
 
 a {
 	text-decoration: none;
-	color: black;
 }
 
 div.page {
@@ -208,7 +207,7 @@ div.project-card {
 	bottom: 5%;
 	left: 5%;
 	border-radius: 20px;
-	background-color: red;
+	background-color: #1f261f;
 }
 
 div.project-card:hover {
@@ -219,24 +218,29 @@ div.project-card:hover {
 	left: 0;
 }
 
+div.project-card:hover > div.card-bot {
+	background-color: #0cf574;
+}
+
 div.project-card > div {
 	/* The two sections of each card */
 	position: absolute;
 	width: 100%;
 	height: 50%;
 	border-radius: 20px;
+	background-color: #1f261f;
 }
 
 div.project-card > div.card-top {
 	/* The top section of the card */
 	top: 0;
-	background-color: red;
 }
 
 div.project-card > div.card-bot {
 	/* The bottom section of the card */
 	top: 50%;
-	background-color: yellow;
+	background-color: #1ccad8;
+	color: #1f261f;
 }
 div.project-cell:nth-child(2) > div.project-card > div.card-top {
 	/* The flipped top section */
@@ -267,7 +271,6 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
-	background-color: red;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -280,13 +283,11 @@ div#mywork > div#work-header {
 
 div.work-item {
 	/* Work card generated with js */
-	background-color: purple;
 	position: relative;
 }
 
 div.work-item > div.wrapper {
 	/* Inner wrapper of each card */
-	background-color: #8aea92;
 	left: 0;
 	right: 0;
 	height: 100%;
@@ -302,7 +303,7 @@ div.work-item > div.wrapper > div {
 
 div.work-item > div.wrapper > div.content {
 	/* The content section of the card */
-	background-color: aqua;
+	background-color: #1f261f;
 	left: 20px;
 	right: 50%;
 	padding: 20px;
@@ -310,10 +311,15 @@ div.work-item > div.wrapper > div.content {
 
 div.work-item > div.wrapper > div.space {
 	/* The space/img section of the card */
-	background-color: darkgreen;
+	background-color: #1ccad8;
 	right: 20px;
 	left: 50%;
 	padding: 20px;
+}
+
+div.work-item > div.wrapper > div.space:hover {
+	/* The space/img section of the card hover */
+	background-color: #0cf574;
 }
 
 div.work-item > div.wrapper.flipped > div.content {
@@ -334,13 +340,21 @@ div.work-item > div.wrapper > div.content > div.content-wrapper {
 	/* Inner wrapper of the content section */
 	width: 100%;
 	height: 100%;
-	background-color: red;
 	position: relative;
 }
 /* info */
 div.content-wrapper > div.info-wrapper {
 	/* Stores general information about the project */
-	background-color: darksalmon;
+	color: #1ccad8;
+}
+
+/* div.content-wrapper > div > *:hover {
+	color: #0cf574;
+} */
+
+div.content-wrapper:hover > div > * {
+	/* All text of the content section hover */
+	color: #0cf574;
 }
 
 div.content-wrapper > div.info-wrapper > h1 {
@@ -356,8 +370,8 @@ div.content-wrapper > div.info-wrapper > p {
 div.content-wrapper > div.challenge-wrapper {
 	/* Stores the challenges that I faced */
 	position: absolute;
-	background-color: cornflowerblue;
 	bottom: 0;
+	color: #1ccad8;
 }
 
 div.content-wrapper > div.challenge-wrapper > ul {
@@ -389,7 +403,8 @@ div#contact {
 
 div#formwrapper {
 	/* Holds the form */
-	background-color: coral;
+	background-color: #1f261f;
+	color: #1ccad8;
 	position: absolute;
 	bottom: 10%;
 	left: 3%;
@@ -461,9 +476,14 @@ form > textarea#message {
 
 form > input#submit {
 	/* Form submit button */
+	background-color: #0cf574;
 	grid-row: 6;
 	grid-column-start: 1;
 	grid-column-end: 4;
+}
+
+form > input#submit:hover {
+	background-color: #1ccad8;
 }
 
 /* Text */
@@ -478,6 +498,10 @@ div#textwrapper {
 	top: 10%;
 }
 
+div#textwrapper > div.contact {
+	color: #1ccad8;
+}
+
 div#textwrapper > div.contact.header {
 	/* Header section */
 	grid-row: 1;
@@ -487,7 +511,6 @@ div#textwrapper > div.contact.header {
 div#textwrapper > div.contact.header > h1 {
 	/* Text header */
 	font-size: 25px;
-	color: white;
 }
 
 div#textwrapper > div.contact.emails {
@@ -499,7 +522,6 @@ div#textwrapper > div.contact.emails {
 div#textwrapper > div.contact > h1 {
 	/* Section headers */
 	font-size: 35px;
-	color: white;
 }
 
 div#textwrapper > div.contact > div.contact.grid {
@@ -510,7 +532,6 @@ div#textwrapper > div.contact > div.contact.grid {
 div#textwrapper > div.contact > div.contact.grid > p,
 div#textwrapper > div.contact > p {
 	/* Section text */
-	color: white;
 	font-size: 20px;
 }
 
