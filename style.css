@@ -434,8 +434,7 @@ form > textarea {
 form > h1 {
 	/* Form header */
 	grid-row: 1;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column: 1 / span 2;
 	text-align: center;
 	margin-bottom: -10px;
 }
@@ -451,8 +450,7 @@ form > label {
 	margin-bottom: -20px;
 }
 
-input#firstname,
-input#lastname,
+input#fullname,
 input#contactinfo {
 	/* First 3 inputs */
 	grid-row: 3;
@@ -461,8 +459,7 @@ input#contactinfo {
 form > label#messagelabel {
 	/* The label for the message box */
 	grid-row: 4;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column: 1 / span 2;
 	text-align: center;
 }
 
@@ -470,16 +467,14 @@ form > textarea#message {
 	/* The message text box */
 	resize: none;
 	grid-row: 5;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column: 1 / span 2;
 }
 
 form > input#submit {
 	/* Form submit button */
 	background-color: #0cf574;
 	grid-row: 6;
-	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column: 1 / span 2;
 }
 
 form > input#submit:hover {

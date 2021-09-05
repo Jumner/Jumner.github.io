@@ -65,7 +65,6 @@ window.onload = () => {
 	// Name hover thing
 	let name = document.getElementById('name');
 	let text = name.innerHTML;
-	console.log(text.split(''));
 	text = text
 		.split('')
 		.map(char => {
@@ -93,7 +92,7 @@ function flip(cell) {
 }
 
 function contactSubmit() {
-	let inputs = ['firstname', 'lastname', 'contactinfo', 'message'];
+	let inputs = ['fullname', 'contactinfo', 'message'];
 	inputs = inputs.map(input => {
 		let inp = document.getElementById(input);
 		let value = inp.value;
