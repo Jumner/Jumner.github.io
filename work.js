@@ -25,13 +25,25 @@ class project {
 		contentWrapper.className = 'content-wrapper';
 		content.appendChild(contentWrapper);
 
+		let infoWrapper = document.createElement('div');
+		infoWrapper.className = 'info-wrapper';
+		contentWrapper.appendChild(infoWrapper);
+
 		let name = document.createElement('h1');
 		name.innerHTML = this.name;
-		contentWrapper.appendChild(name);
+		infoWrapper.appendChild(name);
 
 		let explanation = document.createElement('p');
 		explanation.innerHTML = this.explanation;
-		contentWrapper.appendChild(explanation);
+		infoWrapper.appendChild(explanation);
+
+		let challengeWrapper = document.createElement('div');
+		challengeWrapper.className = 'challenge-wrapper';
+		contentWrapper.appendChild(challengeWrapper);
+
+		let challengeHeader = document.createElement('h1');
+		challengeHeader.innerHTML = "Here's what I learned";
+		challengeWrapper.appendChild(challengeHeader);
 
 		let challenges = document.createElement('ul');
 		this.challenges.forEach(challenge => {
@@ -39,11 +51,15 @@ class project {
 			challengeDom.innerHTML = challenge;
 			challenges.appendChild(challengeDom);
 		});
-		contentWrapper.appendChild(challenges);
+		challengeWrapper.appendChild(challenges);
 
 		let space = document.createElement('div');
 		space.className = 'space';
-		space.innerHTML = 'space: ' + this.name;
+
+		let spaceWrapper = document.createElement('div');
+		spaceWrapper.className = 'space-wrapper';
+		spaceWrapper.style.backgroundImage = "url('img/white.jpeg')";
+		space.appendChild(spaceWrapper);
 
 		wrapper.appendChild(content);
 		wrapper.appendChild(space);
@@ -73,7 +89,7 @@ let projects = [
 	),
 	new project(
 		'Do Work',
-		'Because my high school used google classroom, I wrote a program that connects to the google api and grabs all my unsubmitted school projects. If there are any, It closes all unproductive programs on my computer. The only problem is that we switched to a new worse one. I might re-do this project as brightspace does have its own api.',
+		'Because my high school used google classroom, I wrote a program that connects to the google api and grabs all my unsubmitted school projects. If there are any, It closes all unproductive programs on my computer. The only problem is that my high school switched to a new worse program. I might re-do this project as brightspace does have its own api.',
 		[
 			'One problem is that the google api for google classroom was not very clear for what I needed it for. There are a lot of steps in the process of grabbing the projects. You have to filter through all courses past and present, then sort everything for assignments, sort for ones with due dates, then check if they are submitted. A lot of places to get stuck.',
 			'This was my first real experience with api. I spent many late nights trying to get it to work, and it was very satisfying to see it work.',

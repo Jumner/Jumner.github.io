@@ -240,13 +240,14 @@ div.work-item > div.wrapper > div.content {
 	padding: 20px;
 }
 
-div.work-item > div.wrapper.flipped > div.content {
+div.work-item > div.wrapper > div.space {
+	background-color: darkgreen;
 	right: 20px;
 	left: 50%;
+	padding: 20px;
 }
 
-div.work-item > div.wrapper > div.space {
-	background-color: white;
+div.work-item > div.wrapper.flipped > div.content {
 	right: 20px;
 	left: 50%;
 }
@@ -262,18 +263,40 @@ div.work-item > div.wrapper > div.content > div.content-wrapper {
 	width: 100%;
 	height: 100%;
 	background-color: red;
+	position: relative;
 }
 
-div.content-wrapper > h1 {
+div.content-wrapper > div.challenge-wrapper {
+	position: absolute;
+	background-color: cornflowerblue;
+
+	bottom: 0;
+}
+
+div.content-wrapper > div.info-wrapper {
+	background-color: darksalmon;
+}
+
+div.content-wrapper > div.info-wrapper > h1 {
 	text-align: center;
 }
 
-div.content-wrapper > p {
+div.content-wrapper > div.info-wrapper > p {
 	font-size: 20px;
 }
 
-div.content-wrapper > ul {
+div.content-wrapper > div.challenge-wrapper > ul {
 	padding-left: 20px; /* Offset list */
+}
+
+/* space */
+
+div.work-item > div.wrapper > div.space > div.space-wrapper {
+	width: 100%;
+	height: 100%;
+	/* background-color: red; */
+	/* background-image: url('https://pixy.org/src/21/219269.jpg'); */
+	position: relative;
 }
 
 /* Page 4 - Contact Me */
