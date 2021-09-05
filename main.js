@@ -61,6 +61,18 @@ window.onload = () => {
 			cells.push(cell);
 		}
 	}
+
+	// Name hover thing
+	let name = document.getElementById('name');
+	let text = name.innerHTML;
+	console.log(text.split(''));
+	text = text
+		.split('')
+		.map(char => {
+			return '<span>' + char + '</span>';
+		})
+		.join('');
+	name.innerHTML = text;
 };
 
 function flip(cell) {

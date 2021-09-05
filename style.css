@@ -1,6 +1,7 @@
 /* Colours */
-/* https://coolors.co/8aea92-80ada0-5f5566-33202a-000000 */
-/* https://coolors.co/fffcf2-ccc5b9-403d39-252422-eb5e28 */
+/* Primary:   1f261f */
+/* Secondary: 1CCAD8 */
+/* Accent:    0CF574 */
 
 /* General */
 
@@ -20,16 +21,38 @@ div.page {
 	width: 100%;
 }
 
+::-webkit-scrollbar {
+	width: 10px; /* for chrome */
+	scroll-snap-type: mandatory; /* for ff */
+	scrollbar-width: none;
+}
+
+::-webkit-scrollbar-track {
+	background: #1f261f;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #1ccad8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #0cf574;
+}
+
 /* Header */
 
 div#sticky {
+	/* Sticky header outer div */
 	z-index: 2;
 	position: sticky;
 	top: 0;
 }
 
 div#sticky > div#stickyContainer {
+	/* The inside container for the header stuff */
 	background-color: #1f261f;
+	color: #1ccad8;
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
@@ -38,77 +61,100 @@ div#sticky > div#stickyContainer {
 /* Name */
 
 div#stickyContainer > div#namewrapper {
+	/* The div that contains my name */
 	display: table-cell;
 	vertical-align: middle;
 	width: 150px;
 	min-width: 150px;
 }
 
-div#namewrapper > p {
+div#namewrapper > p#name {
+	/* My name */
 	text-align: center;
-	color: #8aea92;
 	font-weight: bolder;
+}
+
+div#namewrapper > p#name > span:hover {
+	/* Highlight each char on hover */
+	color: #0cf574;
 }
 
 /* Buttons */
 
 div#buttonContainer {
+	/* Contains all the navigation buttons */
 	display: table;
 	float: right;
 	padding: 25px 0;
 }
 div#buttonContainer > div.wrapper {
+	/* The individual nav button wrappers */
 	display: table-cell;
 }
 
 div#buttonContainer > div.wrapper > p > a {
+	/* The link to each section */
 	display: block;
-	color: #8aea92;
-	padding: 8px 18px;
+	color: #1ccad8;
+	padding: 8px 40px;
 	font-weight: bolder;
 }
 
+div#buttonContainer > div.wrapper > p > a:hover {
+	/* Change colour on hover */
+	color: #0cf574;
+}
+
 /* Page 1 - Home */
+
 /* Text box */
 
 div#hometext {
+	/* contains welcome text */
 	background-color: #1f261f;
 	position: absolute;
-	margin-top: 189px;
-	margin-left: 150px;
+	top: 189px;
+	left: 150px;
 	border-radius: 20px;
 }
 
 div#hometext > * {
+	/* All inner text */
 	margin: 30px;
-	color: #8aea92;
+	color: #1ccad8;
 }
 
 div#hometext > h1 {
+	/* Inner big */
 	font-size: 80px;
 }
 
 div#hometext > h2 {
+	/* Inner medium */
 	font-size: 40px;
 }
 
 div#hometext > p {
+	/* Inner small */
 	font-size: 20px;
 }
 
 /* Page 2 - About Me */
 
 div#aboutcontainer {
+	/* Holds all the about me text */
 	display: table;
 	width: 100%;
 	height: 100%;
 }
 
 h1.abouth1 {
-	font-size: 50px;
+	/* The big headers in each section */
+	font-size: 60px;
 }
 
 div#aboutcontainer > div.section > div.wrapper {
+	/* Text wrapper */
 	position: absolute;
 	top: 10%;
 	bottom: 10%;
@@ -117,36 +163,45 @@ div#aboutcontainer > div.section > div.wrapper {
 }
 
 div#aboutcontainer > div.section > div.wrapper > p {
+	/* Paragraph in about me text section */
 	font-size: 28px;
 }
 
 div#aboutcontainer > div.section {
+	/* the 2 sections */
 	display: table-cell;
 	position: relative;
 	width: 50%;
 	height: 90%;
 }
 
-div#aboutcontainer > div.section + div.section {
+div#aboutcontainer > div.section:nth-child(2) {
+	/* The second section*/
 	padding: 5% 5%;
 }
 
 div#projects {
+	/* Stores project cards */
 	width: 100%;
 	height: 100%;
 	display: table;
 }
 
 div#projects > div.project-row {
+	/* Each row of cards (horizontal) */
 	display: table-row;
 }
 
 div#projects > div.project-row > div.project-cell {
+	/* Each individual card */
 	display: table-cell;
 	position: relative;
 }
+
 /* cards */
+
 div.project-card {
+	/* Outer card container */
 	position: absolute;
 	top: 5%;
 	right: 5%;
@@ -157,6 +212,7 @@ div.project-card {
 }
 
 div.project-card:hover {
+	/* Card hover action */
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -164,6 +220,7 @@ div.project-card:hover {
 }
 
 div.project-card > div {
+	/* The two sections of each card */
 	position: absolute;
 	width: 100%;
 	height: 50%;
@@ -171,22 +228,27 @@ div.project-card > div {
 }
 
 div.project-card > div.card-top {
+	/* The top section of the card */
 	top: 0;
 	background-color: red;
 }
 
 div.project-card > div.card-bot {
+	/* The bottom section of the card */
 	top: 50%;
 	background-color: yellow;
 }
 div.project-cell:nth-child(2) > div.project-card > div.card-top {
+	/* The flipped top section */
 	top: 50%;
 }
 div.project-cell:nth-child(2) > div.project-card > div.card-bot {
+	/* The flipped bottom section */
 	top: 0;
 }
 
 p.project-date {
+	/* The text that has the date of event */
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -195,6 +257,7 @@ p.project-date {
 }
 
 h1.project-desc {
+	/* The quick description of the event */
 	position: absolute;
 	margin: 10px;
 	font-size: 15px;
@@ -203,6 +266,7 @@ h1.project-desc {
 /* Page 3 - My Work */
 
 div#mywork {
+	/* The page for my big projects */
 	background-color: red;
 	position: relative;
 	width: 100%;
@@ -210,15 +274,18 @@ div#mywork {
 }
 
 div#mywork > div#work-header {
+	/* Stores the header for the page */
 	text-align: center;
 }
 
 div.work-item {
+	/* Work card generated with js */
 	background-color: purple;
 	position: relative;
 }
 
 div.work-item > div.wrapper {
+	/* Inner wrapper of each card */
 	background-color: #8aea92;
 	left: 0;
 	right: 0;
@@ -227,13 +294,14 @@ div.work-item > div.wrapper {
 }
 
 div.work-item > div.wrapper > div {
+	/* Each of the two sections of the card */
 	position: absolute;
 	top: 0;
 	bottom: 20px;
-	/* width: 50%; */
 }
 
 div.work-item > div.wrapper > div.content {
+	/* The content section of the card */
 	background-color: aqua;
 	left: 20px;
 	right: 50%;
@@ -241,6 +309,7 @@ div.work-item > div.wrapper > div.content {
 }
 
 div.work-item > div.wrapper > div.space {
+	/* The space/img section of the card */
 	background-color: darkgreen;
 	right: 20px;
 	left: 50%;
@@ -248,11 +317,13 @@ div.work-item > div.wrapper > div.space {
 }
 
 div.work-item > div.wrapper.flipped > div.content {
+	/* Reverse order if its flipped */
 	right: 20px;
 	left: 50%;
 }
 
 div.work-item > div.wrapper.flipped > div.space {
+	/* Reverse order if its flipped */
 	left: 20px;
 	right: 50%;
 }
@@ -260,48 +331,53 @@ div.work-item > div.wrapper.flipped > div.space {
 /* content */
 
 div.work-item > div.wrapper > div.content > div.content-wrapper {
+	/* Inner wrapper of the content section */
 	width: 100%;
 	height: 100%;
 	background-color: red;
 	position: relative;
 }
-
-div.content-wrapper > div.challenge-wrapper {
-	position: absolute;
-	background-color: cornflowerblue;
-
-	bottom: 0;
-}
-
+/* info */
 div.content-wrapper > div.info-wrapper {
+	/* Stores general information about the project */
 	background-color: darksalmon;
 }
 
 div.content-wrapper > div.info-wrapper > h1 {
+	/* Header with the name of the project */
 	text-align: center;
 }
 
 div.content-wrapper > div.info-wrapper > p {
+	/* Text description of the project */
 	font-size: 20px;
+}
+/* challenge */
+div.content-wrapper > div.challenge-wrapper {
+	/* Stores the challenges that I faced */
+	position: absolute;
+	background-color: cornflowerblue;
+	bottom: 0;
 }
 
 div.content-wrapper > div.challenge-wrapper > ul {
+	/* The unordered list with challenges */
 	padding-left: 20px; /* Offset list */
 }
 
 /* space */
 
 div.work-item > div.wrapper > div.space > div.space-wrapper {
+	/* Space / img section */
 	width: 100%;
 	height: 100%;
-	/* background-color: red; */
-	/* background-image: url('https://pixy.org/src/21/219269.jpg'); */
 	position: relative;
 }
 
 /* Page 4 - Contact Me */
 
 div#contact {
+	/* Contact me page */
 	background-color: #1f261f;
 	z-index: 5;
 	width: 100%;
