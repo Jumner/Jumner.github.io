@@ -7,12 +7,14 @@
 
 /* find unlabeled regex \{\n\s+[^/] */
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-
 	transition: 0.2s all;
+	font-family: 'Cabin', sans-serif;
 }
 
 a {
@@ -194,7 +196,8 @@ div#aboutcontainer > div.section > div.wrapper {
 
 div#aboutcontainer > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
-	font-size: 28px;
+	font-size: 30px;
+	margin-right: 20px;
 }
 
 /* images */
@@ -211,7 +214,7 @@ div#aboutcontainer > div.section > div.pictures {
 div.pictures > div.image {
 	/* Image container div */
 	position: absolute;
-	background-color: #1ccad8;
+	background-color: #1a201a;
 	border-radius: 5px;
 	padding: 10px;
 }
@@ -258,7 +261,7 @@ div#aboutcontainer > div.section:nth-child(2) {
 div#projects {
 	/* Stores project cards */
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	display: table;
 }
 
@@ -278,12 +281,13 @@ div#projects > div.project-row > div.project-cell {
 div.project-card {
 	/* Outer card container */
 	position: absolute;
-	top: 5%;
-	right: 5%;
-	bottom: 5%;
-	left: 5%;
-	border-radius: 20px;
+	top: 2%;
+	right: 2%;
+	bottom: 2%;
+	left: 2%;
+	border-radius: 25px;
 	background-color: #1a201a;
+	border: 5px solid #1a201a;
 }
 
 div.project-card:hover {
@@ -468,7 +472,8 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
-	background-image: url('img/layered-waves-haikei-contact.svg');
+	/* background-image: url('img/layered-waves-haikei-contact.svg'); */
+	border-top: 7px solid #0cf574;
 	background-color: #1a201a;
 	z-index: 5;
 	width: 100%;
