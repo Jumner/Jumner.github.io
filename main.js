@@ -63,15 +63,15 @@ window.onload = () => {
 	}
 
 	// Name hover thing
-	let name = document.getElementById('name');
-	let text = name.innerHTML;
-	text = text
-		.split('')
-		.map(char => {
-			return '<span>' + char + '</span>';
-		})
-		.join('');
-	name.innerHTML = text;
+	// let name = document.getElementById('name');
+	// let text = name.innerHTML;
+	// text = text
+	// 	.split('')
+	// 	.map(char => {
+	// 		return '<span>' + char + '</span>';
+	// 	})
+	// 	.join('');
+	// name.innerHTML = text;
 };
 
 function flip(cell) {

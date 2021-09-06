@@ -66,8 +66,9 @@ div#sticky {
 div#sticky > div#stickyContainer {
 	/* The inside container for the header stuff */
 	background-color: #1a201a;
+	border-bottom: 5px solid #0cf574;
 	color: #1ccad8;
-	opacity: 0.8;
+	opacity: 0.95;
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
@@ -77,21 +78,10 @@ div#sticky > div#stickyContainer {
 
 div#stickyContainer > div#namewrapper {
 	/* The div that contains my name */
+	font-weight: bolder;
 	display: table-cell;
 	vertical-align: middle;
-	width: 150px;
-	min-width: 150px;
-}
-
-div#namewrapper > p#name {
-	/* My name */
-	text-align: center;
-	font-weight: bolder;
-}
-
-div#namewrapper > p#name > span:hover {
-	/* Highlight each char on hover */
-	color: #0cf574;
+	padding-left: 35px;
 }
 
 /* Buttons */
@@ -102,12 +92,13 @@ div#buttonContainer {
 	float: right;
 	padding: 25px 0;
 }
+
 div#buttonContainer > div.wrapper {
 	/* The individual nav button wrappers */
 	display: table-cell;
 }
 
-div#buttonContainer > div.wrapper > p > a {
+div#buttonContainer > div.wrapper a {
 	/* The link to each section */
 	display: block;
 	color: #1ccad8;
@@ -115,7 +106,7 @@ div#buttonContainer > div.wrapper > p > a {
 	font-weight: bolder;
 }
 
-div#buttonContainer > div.wrapper > p > a:hover {
+div#buttonContainer > div.wrapper a:hover {
 	/* Change colour on hover */
 	color: #0cf574;
 }
@@ -145,8 +136,6 @@ div#hometext a {
 	color: #1ccad8;
 }
 
-div#hometext h2:hover,
-div#hometext p:hover,
 div#hometext a:hover {
 	/* Main text hover */
 	color: #0cf574;
@@ -338,7 +327,8 @@ p.project-date {
 	bottom: 0;
 	right: 0;
 	margin: 10px;
-	font-size: 12px;
+	font-size: 16px;
+	text-decoration: underline;
 }
 
 h1.project-desc {
@@ -352,7 +342,7 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
-	background-image: url('img/blurry-gradient-haikei.svg');
+	background-image: url('img/stacked-waves-haikei-work.svg');
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -363,6 +353,16 @@ div#mywork > div#work-header {
 	text-align: center;
 }
 
+div#work-header > p {
+	/* Work header text */
+	font-size: 24px;
+	margin: 20px;
+}
+
+div#work-header > h1 {
+	font-size: 70px;
+}
+
 div.work-item {
 	/* Work card generated with js */
 	position: relative;
@@ -370,49 +370,52 @@ div.work-item {
 
 div.work-item > div.wrapper {
 	/* Inner wrapper of each card */
-	left: 0;
-	right: 0;
-	height: 100%;
+	background-color: #1a201a;
+	left: 15%;
+	right: 15%;
+	top: 0;
+	bottom: 0;
+	margin: 10px;
 	position: absolute;
+	border-radius: 30px;
 }
 
 div.work-item > div.wrapper > div {
 	/* Each of the two sections of the card */
 	position: absolute;
 	top: 0;
-	bottom: 20px;
+	bottom: 0;
 }
 
 div.work-item > div.wrapper > div.content {
 	/* The content section of the card */
-	background-color: #1a201a;
-	left: 20px;
+	left: 0;
 	right: 50%;
 	padding: 20px;
 }
 
 div.work-item > div.wrapper > div.space {
 	/* The space/img section of the card */
-	background-color: #1ccad8;
-	right: 20px;
+	right: 0;
 	left: 50%;
 	padding: 20px;
 }
 
-div.work-item > div.wrapper > div.space:hover {
-	/* The space/img section of the card hover */
-	background-color: #0cf574;
+div.work-item > div.wrapper > div.space > * {
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 div.work-item > div.wrapper.flipped > div.content {
 	/* Reverse order if its flipped */
-	right: 20px;
+	right: 0;
 	left: 50%;
 }
 
 div.work-item > div.wrapper.flipped > div.space {
 	/* Reverse order if its flipped */
-	left: 20px;
+	left: 0;
 	right: 50%;
 }
 
@@ -422,41 +425,33 @@ div.work-item > div.wrapper > div.content > div.content-wrapper {
 	/* Inner wrapper of the content section */
 	width: 100%;
 	height: 100%;
+	color: #1ccad8;
 	position: relative;
 }
-/* info */
-div.content-wrapper > div.info-wrapper {
-	/* Stores general information about the project */
-	color: #1ccad8;
-}
 
-div.content-wrapper > div > h1:hover,
-div.content-wrapper > div > p:hover,
-div.content-wrapper > div li:hover {
-	/* Hover of each individual text element */
-	color: #0cf574;
-}
-
-div.content-wrapper > div.info-wrapper > h1 {
+div.content-wrapper h1 {
 	/* Header with the name of the project */
 	text-align: center;
+	margin-bottom: 20px;
+	border-bottom: 3px solid #1ccad8;
 }
+/* info */
 
-div.content-wrapper > div.info-wrapper > p {
+div.content-wrapper > div.info-wrapper > p,
+div.content-wrapper > div.challenge-wrapper > ul {
 	/* Text description of the project */
 	font-size: 20px;
+	padding-left: 20px;
 }
 /* challenge */
 div.content-wrapper > div.challenge-wrapper {
 	/* Stores the challenges that I faced */
 	position: absolute;
 	bottom: 0;
-	color: #1ccad8;
 }
 
-div.content-wrapper > div.challenge-wrapper > ul {
-	/* The unordered list with challenges */
-	padding-left: 20px; /* Offset list */
+div.content-wrapper > div.challenge-wrapper li {
+	margin: 10px 0;
 }
 
 /* space */
@@ -472,12 +467,9 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
-	/* background-image: url('img/layered-waves-haikei-contact.svg'); */
-	border-top: 7px solid #0cf574;
 	background-color: #1a201a;
 	z-index: 5;
 	width: 100%;
-	height: 500px;
 	position: relative;
 }
 
@@ -487,24 +479,19 @@ div#formwrapper {
 	/* Holds the form */
 	background-color: #1a201a;
 	color: #1ccad8;
-	position: absolute;
-	bottom: 10%;
-	left: 3%;
-	right: 53%;
-	top: 10%;
+	position: relative;
+	width: 50%;
 }
 
 div#formwrapper > form {
 	/* The actual form */
 	display: grid;
 	position: absolute;
-	top: 3%;
-	bottom: 3%;
-	left: 1%;
-	right: 1%;
+	left: 3%;
+	right: 3%;
+	margin-top: 20px;
 }
 
-form h1:hover,
 form label:hover {
 	/* Form label and header hover */
 	color: #0cf574;
@@ -514,29 +501,29 @@ form > input,
 form > textarea {
 	/* The text boxes in the form */
 	margin: 10px;
-	padding: 10px;
+	padding: 20px;
 	border: none;
 	outline: none;
 }
 
 form > h1 {
 	/* Form header */
+	color: #0cf574;
 	grid-row: 1;
 	grid-column: 1 / span 2;
 	text-align: center;
-	margin-bottom: -10px;
+	font-size: 45px;
 }
 
 form > label.row1 {
 	/* Top 3 labels */
 	grid-row: 2;
-	padding-left: 10px;
 }
 
 form > label {
 	/* Form labels */
+	font-size: 19px;
 	text-align: center;
-	margin-bottom: -20px;
 }
 
 input#fullname,
@@ -549,7 +536,6 @@ form > label#messagelabel {
 	/* The label for the message box */
 	grid-row: 4;
 	grid-column: 1 / span 2;
-	text-align: center;
 }
 
 form > textarea#message {
@@ -582,12 +568,6 @@ div#textwrapper {
 	right: 3%;
 	left: 53%;
 	top: 10%;
-}
-
-div#textwrapper h1:hover,
-div#textwrapper p:hover {
-	/* Text hovers */
-	color: #0cf574;
 }
 
 div#textwrapper > div.contact {

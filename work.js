@@ -1,10 +1,11 @@
 let flipped = false;
 class project {
-	constructor(name, explanation, challenges) {
+	constructor(name, explanation, challenges, url) {
 		this.name = name;
 		this.explanation = explanation;
 		this.challenges = challenges;
 		this.flipped = flipped;
+		this.url = url;
 		flipped = !flipped;
 	}
 
@@ -55,11 +56,7 @@ class project {
 
 		let space = document.createElement('div');
 		space.className = 'space';
-
-		let spaceWrapper = document.createElement('div');
-		spaceWrapper.className = 'space-wrapper';
-		spaceWrapper.style.backgroundImage = "url('img/white.jpeg')";
-		space.appendChild(spaceWrapper);
+		space.innerHTML = this.url;
 
 		wrapper.appendChild(content);
 		wrapper.appendChild(space);
@@ -76,7 +73,8 @@ let projects = [
 			'I often struggle at the actual design aspect as you might know from my old website. I spent a lot of time laying this one out and learning the actual techniques to make this one as good as I can.',
 			'It might sound pretty trivial, but I had to put a year and month on every computer related event in my life. A lot of looking at old pictures, emails, and accounts.',
 			'I learned a lot of tips and tricks of making a website. I always wondered why many websites use so many divs. Now I know, the way that things are positioned on the page is much easier when you surround everything in 20 divs!',
-		]
+		],
+		'<iframe src="index.html" style="border:none;" width="100%" height="100%" title="My website IN my website!"></iframe>'
 	),
 	new project(
 		'Turing Vscode',
@@ -85,7 +83,8 @@ let projects = [
 			'There is always an element of surprise when adding functionality to someone elses program.<br/ >The documentation was extremely clear and painless',
 			'The extension aut-completes built in functions. The problem is that there are hundreds of them, and a lot of them are just duplicates under other names. It was a long and tedious process to copy paste every function with its definition and write a unique explanation. I had to learn how ever function in the entire language works.',
 			'This is a unique project because it started with a very small scope, but as I worked on it, I discovered that adding just a few more features would be really easy. And soon enough I was making it auto-complete user defined variables.',
-		]
+		],
+		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">'
 	),
 	new project(
 		'Do Work',
@@ -94,6 +93,7 @@ let projects = [
 			'One problem is that the google api for google classroom was not very clear for what I needed it for. There are a lot of steps in the process of grabbing the projects. You have to filter through all courses past and present, then sort everything for assignments, sort for ones with due dates, then check if they are submitted. A lot of places to get stuck.',
 			'This was my first real experience with api. I spent many late nights trying to get it to work, and it was very satisfying to see it work.',
 			'I also learned how to close programs with code. It might sound simple, but you have to write a program that filters through individual threads and checks what program they are associated with.',
-		]
+		],
+		'<div class="space-wrapper" style="background-image: url(\'img/white.jpeg\')">'
 	),
 ];
