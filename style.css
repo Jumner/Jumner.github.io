@@ -509,6 +509,8 @@ form > textarea {
 form > h1 {
 	/* Form header */
 	color: #0cf574;
+	border-bottom: 3px solid #0cf574;
+	margin: 10px;
 	grid-row: 1;
 	grid-column: 1 / span 2;
 	text-align: center;
