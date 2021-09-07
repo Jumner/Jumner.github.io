@@ -8,10 +8,10 @@ Array.prototype.random = function () {
 
 window.onload = () => {
 	// Wait for page to load
-	let pages = document.getElementsByClassName('page'); // Grab all the pages
-	for (let i = 0; i < pages.length; i++) {
-		pages[i].style.height = window.innerHeight + 'px'; // Size all the of them
-	}
+	let pages = [...document.getElementsByClassName('page')]; // Grab all the pages
+	pages.forEach(page => {
+		page.style.height = window.innerHeight + 'px'; // Size all the of them
+	});
 	let mywork = document.getElementById('mywork');
 	projects.forEach(project => {
 		mywork.appendChild(project.element);
@@ -72,6 +72,13 @@ window.onload = () => {
 	// 	})
 	// 	.join('');
 	// name.innerHTML = text;
+
+	// Link socials
+	const socials = ['https://github.com/Jumner', '', ''];
+	const socialSvg = [...document.getElementsByClassName('socials')]; // This is awesome
+	socialSvg.forEach((svg, i) => {
+		svg.outerHTML = `<a href="${socials[i]}" class="socials" target="_blank">${svg.outerHTML}</a>`;
+	});
 };
 
 function flip(cell) {
