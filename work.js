@@ -1,11 +1,12 @@
 let flipped = false;
 class project {
-	constructor(name, explanation, challenges, url) {
+	constructor(name, explanation, challenges, url, href = '') {
 		this.name = name;
 		this.explanation = explanation;
 		this.challenges = challenges;
 		this.flipped = flipped;
 		this.url = url;
+		this.href = href;
 		flipped = !flipped;
 	}
 
@@ -18,6 +19,18 @@ class project {
 		wrapper.className = 'wrapper';
 		if (this.flipped) wrapper.className += ' flipped'; // Flip every other one
 		project.appendChild(wrapper);
+
+		wrapper.onclick = () => {
+			if (this.href) window.open(this.href, '_blank');
+		};
+
+		wrapper.onmouseenter = () => {
+			wrapper.classList.add('hover');
+		};
+
+		wrapper.onmouseleave = () => {
+			wrapper.classList.remove('hover');
+		};
 
 		let content = document.createElement('div');
 		content.className = 'content';
@@ -84,7 +97,8 @@ let projects = [
 			'The extension aut-completes built in functions. The problem is that there are hundreds of them, and a lot of them are just duplicates under other names. It was a long and tedious process to copy paste every function with its definition and write a unique explanation. I had to learn how ever function in the entire language works.',
 			'This is a unique project because it started with a very small scope, but as I worked on it, I discovered that adding just a few more features would be really easy. And soon enough I was making it auto-complete user defined variables.',
 		],
-		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">'
+		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">',
+		'https://github.com/Jumner/TuringVscode'
 	),
 	new project(
 		'Do Work',

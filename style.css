@@ -371,13 +371,38 @@ div.work-item {
 div.work-item > div.wrapper {
 	/* Inner wrapper of each card */
 	background-color: #1a201a;
-	left: 15%;
-	right: 15%;
+	left: 25%;
+	right: 25%;
 	top: 0;
 	bottom: 0;
 	margin: 10px;
 	position: absolute;
 	border-radius: 30px;
+}
+
+div.work-item > div.wrapper.hover {
+	left: 2%;
+	right: 2%;
+	border: 5px solid #0cf574;
+}
+
+div.work-item > div.wrapper.hover > div.content div.challenge-wrapper {
+	display: block;
+}
+
+div.work-item > div.wrapper.hover > div.content div.info-wrapper p {
+	font-size: 24px;
+	margin: 0;
+}
+
+div.work-item > div.wrapper > div.content div.info-wrapper p {
+	margin: 30px;
+	font-size: 26px;
+}
+
+div.work-item > div.wrapper:hover > div.content div.info-wrapper h1 {
+	color: #0cf574;
+	border-bottom: 3px solid #0cf574;
 }
 
 div.work-item > div.wrapper > div {
@@ -404,6 +429,7 @@ div.work-item > div.wrapper > div.space {
 div.work-item > div.wrapper > div.space > * {
 	border-radius: 10px;
 	background-repeat: no-repeat;
+	background-size: contain;
 	background-position: center;
 }
 
@@ -446,6 +472,7 @@ div.content-wrapper > div.challenge-wrapper > ul {
 /* challenge */
 div.content-wrapper > div.challenge-wrapper {
 	/* Stores the challenges that I faced */
+	display: none;
 	position: absolute;
 	bottom: 0;
 }
