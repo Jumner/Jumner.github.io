@@ -97,13 +97,61 @@ function flip(cell) {
 	}, 5000 + 15000 * Math.random());
 }
 
+function popup(success, header, text) {
+	const popup = document.createElement('div');
+	popup.className = success ? 'success' : 'fail';
+	popup.id = 'popup';
+
+	const button = document.createElement('div');
+	button.className = 'button';
+	button.innerHTML = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+	<g><path d="M500,10C229.7,10,10,229.7,10,500s219.7,490,490,490s490-219.7,490-490S770.3,10,500,10z M774.6,660.5c31.2,31.2,31.2,82.9,0,114.2c-16.2,16.2-36.6,23.7-57.1,23.7c-20.5,0-40.9-7.5-57.1-23.7L500,614.2L339.5,774.6c-16.2,16.2-36.6,23.7-57.1,23.7s-40.9-7.5-57.1-23.7c-31.2-31.2-31.2-82.9,0-114.2L385.8,500L225.4,339.5c-31.2-31.2-31.2-82.9,0-114.2c31.2-31.2,82.9-31.2,114.2,0L500,385.8l160.5-160.5c31.2-31.2,82.9-31.2,114.2,0c31.2,31.2,31.2,82.9,0,114.2L614.2,500L774.6,660.5z" fill="#1a201a"/></g>
+	</svg>`;
+	button.onclick = () => {
+		popup.remove();
+	};
+	popup.appendChild(button);
+
+	const textBox = document.createElement('div');
+	textBox.id = 'popup-text';
+	popup.appendChild(textBox);
+
+	const head = document.createElement('h1');
+	head.innerHTML = header;
+	textBox.appendChild(head);
+
+	const p = document.createElement('p');
+	p.innerHTML = text;
+	textBox.appendChild(p);
+
+	document.body.appendChild(popup);
+	setTimeout(() => {
+		popup.remove();
+	}, 10000);
+}
+
 function contactSubmit() {
 	let inputs = ['fullname', 'contactinfo', 'message'];
 	inputs = inputs.map(input => {
 		let inp = document.getElementById(input);
 		let value = inp.value;
-		inp.value = '';
 		return value; // Map the values onto the ids
 	});
+	if (
+		!inputs.reduce((acc, inp) => {
+			// Wow I actually used reduce!
+			return acc && inp;
+		})
+	) {
+		// Empty inputs
+		popup(false, 'Error', 'Please fill out all of the input boxes.');
+	} else {
+		// No errors were found
+		popup(
+			true,
+			'Form Submitted!',
+			"This message confirms that my server is running and that I've been notified. Thanks for reaching out 😁"
+		);
+	}
 	console.log(inputs); // Well handle this later
 }
