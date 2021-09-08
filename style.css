@@ -682,6 +682,13 @@ div#textwrapper > div.contact.emails {
 div#textwrapper > div.contact > h1 {
 	/* Section headers */
 	font-size: 35px;
+	margin-bottom: 15px;
+}
+
+div#textwrapper > div.contact p.email:hover,
+div.contact > p.phone:hover {
+	color: #0cf574;
+	text-decoration: underline;
 }
 
 div#textwrapper > div.contact > div.contact.grid {

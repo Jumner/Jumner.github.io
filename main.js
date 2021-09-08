@@ -79,6 +79,17 @@ window.onload = () => {
 	socialSvg.forEach((svg, i) => {
 		svg.outerHTML = `<a href="${socials[i]}" class="socials" target="_blank">${svg.outerHTML}</a>`;
 	});
+
+	// Copy email and phone number
+	let data = [
+		...document.getElementsByClassName('email'),
+		...document.getElementsByClassName('phone'),
+	];
+	data.forEach(element => {
+		element.onclick = () => {
+			navigator.clipboard.writeText(element.innerHTML);
+		};
+	});
 };
 
 function flip(cell) {
