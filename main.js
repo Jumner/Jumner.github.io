@@ -88,6 +88,13 @@ window.onload = () => {
 	data.forEach(element => {
 		element.onclick = () => {
 			navigator.clipboard.writeText(element.innerHTML);
+			element.classList.add('copied');
+			const oldText = element.innerHTML;
+			element.innerHTML = 'Text Copied';
+			setTimeout(() => {
+				element.innerHTML = oldText;
+				element.classList.remove('copied');
+			}, 1500);
 		};
 	});
 };
