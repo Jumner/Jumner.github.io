@@ -727,9 +727,14 @@ a.socials {
 }
 
 svg.socials {
+	transition: all 0.5s ease-in-out;
 	width: 64px;
 	height: 64px;
 }
+svg.socials:hover {
+	transform: rotate(360deg);
+}
+
 svg.socials path.blue {
 	fill: #1ccad8;
 }
