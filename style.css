@@ -227,6 +227,7 @@ div#aboutcontainer {
 
 h1.abouth1 {
 	/* The big headers in each section */
+	margin-bottom: 5px;
 	font-size: 60px;
 }
 
@@ -676,10 +677,10 @@ div#textwrapper > div.contact.header > h1 {
 
 div#textwrapper > div.contact.header > h1::after {
 	/* Text divider */
+	position: absolute;
 	background-color: #1ccad8;
 	border-radius: 2px;
 	content: '';
-	position: absolute;
 	top: 100px;
 	bottom: 70px;
 	left: 45%;
