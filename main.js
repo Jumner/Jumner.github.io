@@ -81,11 +81,6 @@ window.onload = () => {
 	});
 
 	// Copy email and phone number
-	// [...document.getElementsByClassName('email')].forEach(email => {
-	// 	email.style.width = email.clientWidth + 'px';
-	// });
-	// const emailWrapper = document.getElementById('email-wrapper');
-	// emailWrapper.style.width = emailWrapper.clientWidth + 'px';
 	let data = [
 		...document.getElementsByClassName('email'),
 		...document.getElementsByClassName('phone'),
