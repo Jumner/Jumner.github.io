@@ -81,12 +81,20 @@ window.onload = () => {
 	});
 
 	// Copy email and phone number
+	// [...document.getElementsByClassName('email')].forEach(email => {
+	// 	email.style.width = email.clientWidth + 'px';
+	// });
+	// const emailWrapper = document.getElementById('email-wrapper');
+	// emailWrapper.style.width = emailWrapper.clientWidth + 'px';
 	let data = [
 		...document.getElementsByClassName('email'),
 		...document.getElementsByClassName('phone'),
 	];
 	data.forEach(element => {
 		element.onclick = () => {
+			if (element.classList.contains('copied')) {
+				return; // Prevents oldText from being overwritten
+			}
 			navigator.clipboard.writeText(element.innerHTML);
 			element.classList.add('copied');
 			const oldText = element.innerHTML;

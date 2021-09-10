@@ -685,16 +685,18 @@ div#textwrapper > div.contact > h1 {
 	margin-bottom: 15px;
 }
 
-div#textwrapper > div.contact p.email:hover,
-div.contact > p.phone:hover {
+div#textwrapper > div.contact p.email:hover:not(.copied),
+div.contact > p.phone:hover:not(.copied) {
 	color: #0cf574;
 	text-decoration: underline;
 }
 p.email,
 p.phone {
+	width: max-content;
 	transition: 0.25s all;
 }
-p.copied {
+p.copied,
+p.copied:hover {
 	color: #1a201a;
 	box-shadow: inset 0 -24px 0 0 #0cf574; /* very noice */
 }
