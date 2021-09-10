@@ -28,8 +28,8 @@ window.onload = () => {
 		} else {
 			nav.style.padding = '0';
 		}
+		// Fade out text on scroll
 		homeText.style.opacity = 1 - Math.max(Math.min(1, scroll / 300), 0);
-		console.log(scroll);
 	};
 
 	// Date handling
