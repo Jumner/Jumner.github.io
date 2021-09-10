@@ -8,25 +8,28 @@ Array.prototype.random = function () {
 
 window.onload = () => {
 	// Wait for page to load
-	let pages = [...document.getElementsByClassName('page')]; // Grab all the pages
+	const pages = [...document.getElementsByClassName('page')]; // Grab all the pages
 	pages.forEach(page => {
 		page.style.height = window.innerHeight + 'px'; // Size all the of them
 	});
-	let mywork = document.getElementById('mywork');
+	const mywork = document.getElementById('mywork');
 	projects.forEach(project => {
 		mywork.appendChild(project.element);
 	});
-	let contact = document.getElementById('contact');
+	const contact = document.getElementById('contact');
 	contact.style.height = Math.round(window.innerHeight / 2) + 'px';
 	// Scroll handling
-	let nav = document.getElementById('buttonContainer');
+	const nav = document.getElementById('buttonContainer');
+	const homeText = document.getElementById('hometext');
 	window.onscroll = () => {
-		let scroll = window.scrollY;
+		const scroll = window.scrollY;
 		if (scroll < 50) {
 			nav.style.padding = 25 - 0.5 * scroll + 'px' + ' 0';
 		} else {
 			nav.style.padding = '0';
 		}
+		homeText.style.opacity = 1 - Math.max(Math.min(1, scroll / 300), 0);
+		console.log(scroll);
 	};
 
 	// Date handling
