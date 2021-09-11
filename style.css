@@ -230,8 +230,8 @@ hr#aboutHr {
 	border-top: 5px dotted #1a201a;
 	position: absolute;
 	top: 50%;
-	left: 20%;
-	right: 20%;
+	/* left: 20%;
+	right: 20%; */
 }
 
 h1.abouth1 {

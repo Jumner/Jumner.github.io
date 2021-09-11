@@ -57,6 +57,17 @@ window.onload = () => {
 			#1a201a ${Math.pow(percent, 1.4)}%
 		)`;
 		// Hr lengthen effect
+		const aboutHr = document.getElementById('aboutHr');
+		percent =
+			clamp(
+				54 +
+					(-34 * (window.innerHeight - aboutHr.getBoundingClientRect().y)) /
+						(window.innerHeight / 3),
+				20,
+				50
+			) + '%';
+		aboutHr.style.left = percent;
+		aboutHr.style.right = percent;
 	};
 
 	// Date handling
