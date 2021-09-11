@@ -73,9 +73,25 @@ window.onload = () => {
 		percent = 1.5 * window.innerHeight - scroll;
 		percent = Math.pow(Math.max(percent, 0), 1.2);
 		percent = clamp(percent, 0, window.innerHeight / 2);
-		console.log(percent);
 		projectH1.style.top = percent + 'px';
 		// Projects slide in
+		const rows = [...document.getElementsByClassName('project-row')];
+		percent =
+			(window.innerHeight - rows[0].getBoundingClientRect().y) /
+			(window.innerHeight / 1.5);
+		percent = Math.max(
+			window.innerWidth / 2 - (percent * window.innerWidth) / 2,
+			0
+		);
+		percent = clamp(
+			Math.pow(percent, 1.15),
+			0,
+			window.innerWidth / 2 + rows[0].getBoundingClientRect().width / 2
+		);
+		rows.forEach((row, i) => {
+			const sign = 2 * i - 1;
+			row.style.left = percent * sign + 'px';
+		});
 	};
 
 	// Date handling

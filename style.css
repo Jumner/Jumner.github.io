@@ -340,6 +340,7 @@ div#projects {
 
 div#projects > div.project-row {
 	/* Each row of cards (horizontal) */
+	position: relative;
 	display: table-row;
 }
 
