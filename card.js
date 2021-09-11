@@ -16,7 +16,7 @@ class card {
 		let date = document.createElement('p');
 		date.className = 'project-date';
 		date.innerHTML = this.date;
-		bot.appendChild(date);
+		top.appendChild(date);
 		let desc = document.createElement('h1');
 		desc.className = 'project-desc';
 		desc.innerHTML = this.description;

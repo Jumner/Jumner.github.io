@@ -103,17 +103,6 @@ window.onload = () => {
 		}
 	}
 
-	// Name hover thing
-	// let name = document.getElementById('name');
-	// let text = name.innerHTML;
-	// text = text
-	// 	.split('')
-	// 	.map(char => {
-	// 		return '<span>' + char + '</span>';
-	// 	})
-	// 	.join('');
-	// name.innerHTML = text;
-
 	// Link socials
 	const socials = ['https://github.com/Jumner', '', ''];
 	const socialSvg = [...document.getElementsByClassName('socials')]; // This is awesome

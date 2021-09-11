@@ -376,6 +376,10 @@ div.project-card:hover > div.card-bot {
 	background-color: #0cf574;
 }
 
+div.project-card:hover > div.card-top {
+	color: #0cf574;
+}
+
 div.project-card > div {
 	/* The two sections of each card */
 	position: absolute;
@@ -387,6 +391,7 @@ div.project-card > div {
 
 div.project-card > div.card-top {
 	/* The top section of the card */
+	color: #1ccad8;
 	top: 0;
 }
 
@@ -405,14 +410,16 @@ div.project-cell:nth-child(2) > div.project-card > div.card-bot {
 	top: 0;
 }
 
+div.project-cell:nth-child(2) > div.project-card p.project-date {
+	bottom: 0;
+}
+
 p.project-date {
 	/* The text that has the date of event */
 	position: absolute;
-	bottom: 0;
 	right: 0;
 	margin: 10px;
 	font-size: 16px;
-	text-decoration: underline;
 }
 
 h1.project-desc {
