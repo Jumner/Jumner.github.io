@@ -36,34 +36,27 @@ window.onload = () => {
 			nav.style.padding = '0';
 		}
 		// Fade out text on scroll
-		homeText.style.opacity =
-			1 - Math.max(Math.min(1, (3 * scroll) / window.innerHeight), 0);
+		homeText.style.opacity = 1 - clamp((3 * scroll) / window.innerHeight, 0, 1);
 		// Bring in about header on scroll
 		aboutme[0].style.right =
-			Math.max(
-				(window.innerHeight * 0.5 + aboutme[0].scrollHeight - scroll) / 5,
-				0
+			clamp(
+				Math.pow(Math.max(500 - scroll + aboutme[0].scrollHeight, 0), 1.2),
+				0,
+				window.innerWidth / 2
 			) + 'px';
+		// Fade in text on scroll
 		const aboutP = document.getElementById('aboutP');
-		console.log(
-			Math.min(
-				Math.max(
-					(100 * (scroll - aboutP.scrollHeight + window.innerHeight / 2)) /
-						aboutP.clientHeight,
-					0
-				),
-				100
-			)
-		);
-		const percent =
-			(100 * (scroll - aboutP.scrollHeight + window.innerHeight / 2)) /
+		let percent =
+			Math.max(scroll - aboutP.scrollHeight + window.innerHeight / 2, 0) /
 			aboutP.clientHeight;
+		percent = 100 - 100 * clamp(percent, 0, 1);
 		aboutP.style.backgroundImage = `linear-gradient(
 			to top,
 			rgba(0, 0, 0, 0),
-			rgba(0, 0, 0, 0) ${clamp(100 - percent, 0, 100)}%,
-			#1a201a ${clamp(Math.pow(100 - percent, 1.3), 0, 100)}%
+			rgba(0, 0, 0, 0) ${Math.pow(percent, 1.07)}%,
+			#1a201a ${Math.pow(percent, 1.4)}%
 		)`;
+		// Hr lengthen effect
 	};
 
 	// Date handling
