@@ -12,6 +12,8 @@ window.onload = () => {
 	pages.forEach(page => {
 		page.style.height = window.innerHeight + 'px'; // Size all the of them
 	});
+	const aboutMe = document.getElementById('aboutme');
+	aboutMe.style.height = window.innerHeight * 2 + 'px';
 	const mywork = document.getElementById('mywork');
 	projects.forEach(project => {
 		mywork.appendChild(project.element);
