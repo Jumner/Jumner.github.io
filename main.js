@@ -68,6 +68,14 @@ window.onload = () => {
 			) + '%';
 		aboutHr.style.left = percent;
 		aboutHr.style.right = percent;
+		// Project h1 fade
+		const projectH1 = document.getElementById('aboutProjectH1');
+		percent = 1.5 * window.innerHeight - scroll;
+		percent = Math.pow(Math.max(percent, 0), 1.2);
+		percent = clamp(percent, 0, window.innerHeight / 2);
+		console.log(percent);
+		projectH1.style.top = percent + 'px';
+		// Projects slide in
 	};
 
 	// Date handling
