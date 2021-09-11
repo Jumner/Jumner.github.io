@@ -1,6 +1,10 @@
 // My Javascript!
 // let pageColours = ['linear-gradient(-45deg, #1f261f, #95af95)', '#ffffff'];
 
+function clamp(value, min, max) {
+	return Math.min(Math.max(value, min), max);
+}
+
 Array.prototype.random = function () {
 	// Python has corrupted me
 	return this[Math.floor(Math.random() * this.length)];
@@ -23,6 +27,7 @@ window.onload = () => {
 	// Scroll handling
 	const nav = document.getElementById('buttonContainer');
 	const homeText = document.getElementById('hometext');
+	const aboutme = document.getElementsByClassName('abouth1');
 	window.onscroll = () => {
 		const scroll = window.scrollY;
 		if (scroll < 50) {
@@ -31,7 +36,34 @@ window.onload = () => {
 			nav.style.padding = '0';
 		}
 		// Fade out text on scroll
-		homeText.style.opacity = 1 - Math.max(Math.min(1, scroll / 300), 0);
+		homeText.style.opacity =
+			1 - Math.max(Math.min(1, (3 * scroll) / window.innerHeight), 0);
+		// Bring in about header on scroll
+		aboutme[0].style.right =
+			Math.max(
+				(window.innerHeight * 0.5 + aboutme[0].scrollHeight - scroll) / 5,
+				0
+			) + 'px';
+		const aboutP = document.getElementById('aboutP');
+		console.log(
+			Math.min(
+				Math.max(
+					(100 * (scroll - aboutP.scrollHeight + window.innerHeight / 2)) /
+						aboutP.clientHeight,
+					0
+				),
+				100
+			)
+		);
+		const percent =
+			(100 * (scroll - aboutP.scrollHeight + window.innerHeight / 2)) /
+			aboutP.clientHeight;
+		aboutP.style.backgroundImage = `linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0),
+			rgba(0, 0, 0, 0) ${clamp(100 - percent, 0, 100)}%,
+			#1a201a ${clamp(Math.pow(100 - percent, 1.3), 0, 100)}%
+		)`;
 	};
 
 	// Date handling
