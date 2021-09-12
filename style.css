@@ -97,12 +97,12 @@ div#popup > div#popup-text {
 }
 
 div#popup-text h1 {
-	font-size: 4rem;
+	font-size: 40px;
 	margin-bottom: 15px;
 }
 
 div#popup-text p {
-	font-size: 2.4rem;
+	font-size: 24px;
 }
 
 div#popup div.button:hover svg {
@@ -122,7 +122,6 @@ div#sticky > div#stickyContainer {
 	/* The inside container for the header stuff */
 	background-color: #1a201a;
 	border-bottom: 5px solid #0cf574;
-	opacity: 0.95;
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
@@ -141,7 +140,6 @@ div#stickyContainer > div#namewrapper {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 35px;
-	color: #1ccad8;
 }
 
 /* Buttons */
@@ -162,7 +160,7 @@ div#buttonContainer > div.wrapper a {
 	/* The link to each section */
 	display: block;
 	color: #1ccad8;
-	padding: 8px 40px;
+	padding: 8px 2.5vw;
 	font-weight: bolder;
 }
 
