@@ -19,12 +19,24 @@ Array.prototype.random = function () {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
-window.onload = () => {
-	// Wait for page to load
+function resize() {
+	// Set font size
+	const area = window.innerWidth * window.innerHeight;
+	document.documentElement.style.fontSize =
+		Math.round(10 * Math.sqrt(area / 1787520)) + 'px'; // Set default font size (sorry accessability)
 	const pages = [...document.getElementsByClassName('page')]; // Grab all the pages
 	pages.forEach(page => {
 		page.style.height = window.innerHeight + 'px'; // Size all the of them
 	});
+}
+
+window.onresize = () => {
+	resize();
+};
+
+window.onload = () => {
+	// Wait for page to load
+	resize(); // Set stuff based on window size
 	if (inIframe()) {
 		// Site in iframe
 		const pageContainer = document.getElementById('pageContainer');

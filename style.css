@@ -15,6 +15,7 @@
 	scroll-behavior: smooth;
 	transition: 0.2s all;
 	font-family: 'Cabin', sans-serif;
+	color: #1a201a;
 }
 
 a {
@@ -56,7 +57,6 @@ div.page {
 /* popup */
 div#popup {
 	border-radius: 18px;
-	color: #1a201a;
 	position: fixed;
 	display: block;
 	top: 50%;
@@ -65,7 +65,6 @@ div#popup {
 	height: 350px;
 	transform: translate(-50%, -50%);
 	z-index: 10;
-	background-color: red;
 }
 
 div#popup.success {
@@ -77,8 +76,8 @@ div#popup.fail {
 }
 
 div#popup div.button svg {
-	width: 48px;
-	height: 48px;
+	width: 40px;
+	height: 40px;
 }
 
 div#popup div.button {
@@ -93,17 +92,17 @@ div#popup > div#popup-text {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	top: 63px; /* 48 + 15 😎 */
+	top: 55px; /* 40 + 15 😎 */
 	padding: 50px;
 }
 
 div#popup-text h1 {
-	font-size: 40px;
+	font-size: 4rem;
 	margin-bottom: 15px;
 }
 
 div#popup-text p {
-	font-size: 24px;
+	font-size: 2.4rem;
 }
 
 div#popup div.button:hover svg {
@@ -123,11 +122,15 @@ div#sticky > div#stickyContainer {
 	/* The inside container for the header stuff */
 	background-color: #1a201a;
 	border-bottom: 5px solid #0cf574;
-	color: #1ccad8;
 	opacity: 0.95;
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
+	font-size: 1.6rem;
+}
+
+div#stickyContainer p {
+	color: #1ccad8;
 }
 
 /* Name */
@@ -138,6 +141,7 @@ div#stickyContainer > div#namewrapper {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 35px;
+	color: #1ccad8;
 }
 
 /* Buttons */
@@ -199,17 +203,17 @@ div#hometext a:hover {
 
 div#hometext > h1 {
 	/* Inner big */
-	font-size: 80px;
+	font-size: 8rem;
 }
 
 div#hometext > h2 {
 	/* Inner medium */
-	font-size: 40px;
+	font-size: 4rem;
 }
 
 div#hometext > p {
 	/* Inner small */
-	font-size: 20px;
+	font-size: 2rem;
 }
 
 /* Page 2 - About Me */
@@ -230,8 +234,6 @@ hr#aboutHr {
 	border-top: 5px dotted #1a201a;
 	position: absolute;
 	top: 50%;
-	/* left: 20%;
-	right: 20%; */
 }
 
 h1.abouth1 {
@@ -239,7 +241,7 @@ h1.abouth1 {
 	margin-bottom: 25px;
 	text-align: center;
 	position: relative;
-	font-size: 60px;
+	font-size: 6rem;
 }
 
 h1.abouth1::after {
@@ -265,7 +267,7 @@ div#aboutcontainer > div.section > div.wrapper {
 
 div#aboutcontainer > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
-	font-size: 30px;
+	font-size: 3rem;
 	margin-right: 20px;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -376,10 +378,6 @@ div.project-card:hover > div.card-bot {
 	background-color: #0cf574;
 }
 
-div.project-card:hover > div.card-top {
-	color: #0cf574;
-}
-
 div.project-card > div {
 	/* The two sections of each card */
 	position: absolute;
@@ -391,7 +389,6 @@ div.project-card > div {
 
 div.project-card > div.card-top {
 	/* The top section of the card */
-	color: #1ccad8;
 	top: 0;
 }
 
@@ -419,14 +416,18 @@ p.project-date {
 	position: absolute;
 	right: 0;
 	margin: 10px;
-	font-size: 16px;
+	font-size: 1.6rem;
+	color: #1ccad8;
+}
+div.project-card:hover p.project-date {
+	color: #0cf574;
 }
 
 h1.project-desc {
 	/* The quick description of the event */
 	position: absolute;
 	margin: 10px;
-	font-size: 15px;
+	font-size: 1.7rem;
 }
 
 /* Page 3 - My Work */
@@ -447,22 +448,16 @@ div#mywork > div#work-header {
 div#work-header > * {
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	/* background-image: linear-gradient(
-		to left,
-		rgba(0, 0, 0, 0),
-		rgba(0, 0, 0, 0) 0%,
-		#1a201a 1%
-	); */
 }
 
 div#work-header > p {
 	/* Work header text */
-	font-size: 24px;
+	font-size: 2.4rem;
 	margin: 20px;
 }
 
 div#work-header > h1 {
-	font-size: 70px;
+	font-size: 7rem;
 }
 
 div.work-item {
@@ -493,13 +488,13 @@ div.work-item > div.wrapper.hover > div.content div.challenge-wrapper {
 }
 
 div.work-item > div.wrapper.hover > div.content div.info-wrapper p {
-	font-size: 24px;
+	font-size: 2.4rem;
 	margin: 0;
 }
 
 div.work-item > div.wrapper > div.content div.info-wrapper p {
 	margin: 30px;
-	font-size: 26px;
+	font-size: 2.6rem;
 }
 
 div.work-item > div.wrapper:hover > div.content div.info-wrapper h1 {
@@ -553,8 +548,13 @@ div.work-item > div.wrapper > div.content > div.content-wrapper {
 	/* Inner wrapper of the content section */
 	width: 100%;
 	height: 100%;
-	color: #1ccad8;
 	position: relative;
+}
+
+div.work-item h1,
+div.work-item p,
+div.work-item li {
+	color: #1ccad8;
 }
 
 div.content-wrapper h1 {
@@ -568,7 +568,7 @@ div.content-wrapper h1 {
 div.content-wrapper > div.info-wrapper > p,
 div.content-wrapper > div.challenge-wrapper > ul {
 	/* Text description of the project */
-	font-size: 20px;
+	font-size: 2rem;
 	padding-left: 20px;
 }
 /* challenge */
@@ -620,7 +620,6 @@ div#formwrapper > form {
 	right: 3%;
 	top: 10px;
 }
-
 form label:hover {
 	/* Form label and header hover */
 	color: #0cf574;
@@ -645,7 +644,7 @@ form > h1 {
 	grid-row: 1;
 	grid-column: 1 / span 2;
 	text-align: center;
-	font-size: 45px;
+	font-size: 4.5rem;
 }
 
 form > label.row1 {
@@ -655,7 +654,8 @@ form > label.row1 {
 
 form > label {
 	/* Form labels */
-	font-size: 19px;
+	color: #1ccad8;
+	font-size: 1.9rem;
 	text-align: center;
 }
 
@@ -703,7 +703,8 @@ div#textwrapper {
 	top: 10%;
 }
 
-div#textwrapper > div.contact {
+div#textwrapper h1,
+div#textwrapper p {
 	/* Default text colour */
 	color: #1ccad8;
 }
@@ -717,7 +718,7 @@ div#textwrapper > div.contact.header {
 
 div#textwrapper > div.contact.header > h1 {
 	/* Text header */
-	font-size: 32px;
+	font-size: 3.2rem;
 }
 
 div#textwrapper > div.contact.header > h1::after {
@@ -740,7 +741,7 @@ div#textwrapper > div.contact.emails {
 
 div#textwrapper > div.contact > h1 {
 	/* Section headers */
-	font-size: 35px;
+	font-size: 3.5rem;
 	margin-bottom: 15px;
 }
 
@@ -768,7 +769,7 @@ div#textwrapper > div.contact > div.contact.grid {
 div#textwrapper > div.contact > div.contact.grid > p,
 div#textwrapper > div.contact > p {
 	/* Section text */
-	font-size: 20px;
+	font-size: 2rem;
 }
 
 div#textwrapper > div.contact:nth-child(3) {
