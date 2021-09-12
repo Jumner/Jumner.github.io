@@ -239,7 +239,6 @@ h1.abouth1 {
 	margin-bottom: 25px;
 	text-align: center;
 	position: relative;
-	/* right: 200px; */
 	font-size: 60px;
 }
 
@@ -443,6 +442,17 @@ div#mywork {
 div#mywork > div#work-header {
 	/* Stores the header for the page */
 	text-align: center;
+}
+
+div#work-header > * {
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* background-image: linear-gradient(
+		to left,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0) 0%,
+		#1a201a 1%
+	); */
 }
 
 div#work-header > p {

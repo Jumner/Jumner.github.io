@@ -92,6 +92,19 @@ window.onload = () => {
 			const sign = 2 * i - 1;
 			row.style.left = percent * sign + 'px';
 		});
+		// My work header and text
+		const workHead = document.getElementById('work-header');
+		percent =
+			100 -
+			(100 * (window.innerHeight - workHead.getBoundingClientRect().y)) /
+				(window.innerHeight / 1.5);
+		percent = Math.max(percent, 0);
+		percent = clamp(Math.pow(percent, 1.3), 0, 100);
+		[...workHead.children].forEach(child => {
+			child.style.backgroundImage = `linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0) ${percent}%, #1a201a ${
+				percent + 5
+			}%)`;
+		});
 	};
 
 	// Date handling
