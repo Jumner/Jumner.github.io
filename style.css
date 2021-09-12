@@ -255,61 +255,16 @@ h1.abouth1::after {
 div#aboutme > div.section > div.wrapper {
 	/* Text wrapper */
 	position: absolute;
-	top: 10%;
-	bottom: 10%;
-	left: 10%;
-	right: 50%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 div#aboutme > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
-	font-size: 3rem;
-	margin-right: 20px;
+	padding: 20px;
+	font-size: 3.3rem;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-
-/* images */
-
-div#aboutme > div.section > div.pictures {
-	/* Picture container */
-	position: absolute;
-	top: 10%;
-	bottom: 10%;
-	left: 50%;
-	right: 10%;
-}
-
-div.pictures > div.image {
-	/* Image container div */
-	position: absolute;
-	background-color: #1a201a;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-div.pictures > div.image:hover {
-	/* Image container div hover */
-	background-color: #0cf574;
-	padding: 2px;
-}
-
-div.pictures > div.image:hover > img {
-	/* Image wrapper div hover */
-	border-radius: 4px;
-}
-
-div.image:nth-child(2) {
-	/* Second image */
-	bottom: 0;
-}
-
-div.pictures > div.image > img {
-	/* Images about me */
-	display: block; /* Fixes weird border thing */
-	width: 100%;
-	height: 100%;
-	border-radius: 3px;
 }
 
 /* Not images */
@@ -317,9 +272,10 @@ div.pictures > div.image > img {
 div#aboutme > div.section {
 	/* the 2 sections */
 	position: absolute;
-	/* aspect-ratio: 1.4; */
-	left: 25%;
-	right: 25%;
+	width: 45%;
+	min-width: min(950px, 95vw); /* css has min and max??? 🤯 */
+	left: 50%;
+	transform: translateX(-50%);
 	height: 45%;
 }
 
