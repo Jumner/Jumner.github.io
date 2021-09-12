@@ -13,7 +13,6 @@ class project {
 	get element() {
 		let project = document.createElement('div');
 		project.className = 'work-item';
-		project.style.height = Math.round(window.innerHeight * 0.75) + 'px';
 
 		let wrapper = document.createElement('div');
 		wrapper.className = 'wrapper';
@@ -87,7 +86,6 @@ let projects = [
 			'It might sound pretty trivial, but I had to put a year and month on every computer related event in my life. A lot of looking at old pictures, emails, and accounts.',
 			'I learned a lot of tips and tricks of making a website. I always wondered why many websites use so many divs. Now I know, the way that things are positioned on the page is much easier when you surround everything in 20 divs!',
 		],
-		// 'put img here'
 		'<iframe src="index.html" style="border:none;" width="100%" height="100%" title="My website IN my website!"></iframe>'
 	),
 	new project(

@@ -178,6 +178,7 @@ div#buttonContainer > div.wrapper a:hover {
 div#home {
 	/* Home page */
 	background-image: url('img/layered-waves-haikei-home.svg');
+	height: 100vh;
 }
 
 div#hometext {
@@ -220,6 +221,8 @@ div#hometext > p {
 
 div#aboutme {
 	background-image: url('img/stacked-waves-haikei-aboutme.svg');
+	overflow: hidden;
+	height: 200vh;
 }
 
 div#aboutcontainer {
@@ -462,6 +465,7 @@ div#work-header > h1 {
 
 div.work-item {
 	/* Work card generated with js */
+	height: 75vh;
 	position: relative;
 }
 
@@ -599,6 +603,7 @@ div#contact {
 	background-color: #1a201a;
 	z-index: 5;
 	width: 100%;
+	height: 50vh;
 	position: relative;
 }
 

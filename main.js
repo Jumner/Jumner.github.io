@@ -24,10 +24,6 @@ function resize() {
 	const area = window.innerWidth * window.innerHeight;
 	document.documentElement.style.fontSize =
 		Math.round(10 * Math.sqrt(area / 1787520)) + 'px'; // Set default font size (sorry accessability)
-	const pages = [...document.getElementsByClassName('page')]; // Grab all the pages
-	pages.forEach(page => {
-		page.style.height = window.innerHeight + 'px'; // Size all the of them
-	});
 }
 
 window.onresize = () => {
@@ -45,14 +41,10 @@ window.onload = () => {
 		});
 		return; // Nothing else is needed 😄
 	}
-	const aboutMe = document.getElementById('aboutme');
-	aboutMe.style.height = window.innerHeight * 2 + 'px';
 	const mywork = document.getElementById('mywork');
 	projects.forEach(project => {
 		mywork.appendChild(project.element);
 	});
-	const contact = document.getElementById('contact');
-	contact.style.height = Math.round(window.innerHeight / 2) + 'px';
 	// Scroll handling
 	const nav = document.getElementById('buttonContainer');
 	const homeText = document.getElementById('hometext');
@@ -134,7 +126,7 @@ window.onload = () => {
 				percent + 5
 			}%)`;
 		});
-		// Work cards
+		// Work cards effect
 		const cards = [...document.getElementsByClassName('work-item')];
 		cards.forEach(card => {
 			let percent =
@@ -143,7 +135,7 @@ window.onload = () => {
 			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
 			card.style.opacity = percent;
 		});
-		// Img fade
+		// Img fade effect
 		const imgs = [...document.getElementsByClassName('image')];
 		imgs.forEach(img => {
 			let percent =
