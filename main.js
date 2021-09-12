@@ -1,6 +1,15 @@
 // My Javascript!
 // let pageColours = ['linear-gradient(-45deg, #1f261f, #95af95)', '#ffffff'];
 
+function inIframe() {
+	// Straight from stackoverflow 🙃
+	try {
+		return window.self !== window.top;
+	} catch (e) {
+		return true;
+	}
+}
+
 function clamp(value, min, max) {
 	return Math.min(Math.max(value, min), max);
 }
@@ -16,6 +25,14 @@ window.onload = () => {
 	pages.forEach(page => {
 		page.style.height = window.innerHeight + 'px'; // Size all the of them
 	});
+	if (inIframe()) {
+		// Site in iframe
+		const pageContainer = document.getElementById('pageContainer');
+		[...pageContainer.children].forEach((child, i) => {
+			if (i !== 0) child.remove();
+		});
+		return; // Nothing else is needed 😄
+	}
 	const aboutMe = document.getElementById('aboutme');
 	aboutMe.style.height = window.innerHeight * 2 + 'px';
 	const mywork = document.getElementById('mywork');
