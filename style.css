@@ -704,7 +704,7 @@ div#textwrapper {
 }
 
 div#textwrapper h1,
-div#textwrapper p {
+div#textwrapper p:not(.copied) {
 	/* Default text colour */
 	color: #1ccad8;
 }
