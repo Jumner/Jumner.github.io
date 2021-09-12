@@ -247,7 +247,7 @@ function contactSubmit() {
 		popup(
 			true,
 			'Form Submitted!',
-			"This message confirms that my server is running and that I've been notified. Thanks for reaching out 😁"
+			"This message confirms that my server is running and that I've been notified. Thanks for reaching out! 😁"
 		);
 	}
 	console.log(inputs); // Well handle this later
