@@ -136,12 +136,21 @@ window.onload = () => {
 		});
 		// Work cards
 		const cards = [...document.getElementsByClassName('work-item')];
-		cards.forEach((card, i) => {
+		cards.forEach(card => {
 			let percent =
 				(window.innerHeight - card.getBoundingClientRect().y) /
 				(window.innerHeight / 3);
 			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
 			card.style.opacity = percent;
+		});
+		// Img fade
+		const imgs = [...document.getElementsByClassName('image')];
+		imgs.forEach(img => {
+			let percent =
+				(window.innerHeight - img.getBoundingClientRect().y) /
+				(window.innerHeight / 2.5);
+			percent = clamp(Math.pow(Math.max(percent, 0), 1.4), 0, 1);
+			img.style.opacity = percent;
 		});
 	};
 
