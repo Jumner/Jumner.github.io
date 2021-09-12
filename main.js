@@ -99,11 +99,20 @@ window.onload = () => {
 			(100 * (window.innerHeight - workHead.getBoundingClientRect().y)) /
 				(window.innerHeight / 1.5);
 		percent = Math.max(percent, 0);
-		percent = clamp(Math.pow(percent, 1.3), 0, 100);
+		percent = clamp(Math.pow(percent, 0.9), 0, 100);
 		[...workHead.children].forEach(child => {
 			child.style.backgroundImage = `linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0) ${percent}%, #1a201a ${
 				percent + 5
 			}%)`;
+		});
+		// Work cards
+		const cards = [...document.getElementsByClassName('work-item')];
+		cards.forEach((card, i) => {
+			let percent =
+				(window.innerHeight - card.getBoundingClientRect().y) /
+				(window.innerHeight / 3);
+			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
+			card.style.opacity = percent;
 		});
 	};
 
