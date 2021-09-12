@@ -221,7 +221,7 @@ div#aboutme {
 	background-image: url('img/stacked-waves-haikei-aboutme.svg');
 	overflow: hidden;
 	height: 200vh;
-	width: 100vw;
+	width: 100%;
 	position: relative;
 }
 
@@ -317,6 +317,7 @@ div.pictures > div.image > img {
 div#aboutme > div.section {
 	/* the 2 sections */
 	position: absolute;
+	/* aspect-ratio: 1.4; */
 	left: 25%;
 	right: 25%;
 	height: 45%;
