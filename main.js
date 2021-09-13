@@ -63,13 +63,17 @@ window.onload = () => {
 			clamp(
 				Math.pow(Math.max(500 - scroll + aboutme[0].scrollHeight, 0), 1.2),
 				0,
-				window.innerWidth / 2
+				window.innerWidth / 2 + 100
 			) + 'px';
 		// Fade in text on scroll
 		const aboutP = document.getElementById('aboutP');
 		let percent =
-			Math.max(scroll - aboutP.scrollHeight + window.innerHeight / 2, 0) /
-			aboutP.clientHeight;
+			Math.max(
+				scroll + window.innerHeight / 2 - aboutP.getBoundingClientRect().y,
+				0
+			) /
+			(window.innerHeight / 1.3);
+		console.log(percent);
 		percent = 100 - 100 * clamp(percent, 0, 1);
 		aboutP.style.backgroundImage = `linear-gradient(
 			to top,
