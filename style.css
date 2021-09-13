@@ -767,6 +767,7 @@ div#social-wrapper {
 }
 
 a.socials {
+	top: 100px;
 	margin-left: 50%;
 	transform: translateX(-50%);
 	grid-row: 1;
