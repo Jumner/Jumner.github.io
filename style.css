@@ -383,7 +383,7 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
-	top: -2px;
+	top: -1px;
 	background-image: url('img/stacked-waves-haikei-work.svg');
 	position: relative;
 	width: 100%;
@@ -547,7 +547,7 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
-	top: -3px;
+	margin-top: -1px;
 	background-color: #1a201a;
 	border-top: 5px solid #1ccad8;
 	z-index: 5;
