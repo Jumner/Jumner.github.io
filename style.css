@@ -22,11 +22,6 @@ a {
 	text-decoration: none;
 }
 
-div.page {
-	z-index: -2;
-	width: 100%;
-}
-
 ::-webkit-scrollbar {
 	width: 10px; /* for chrome */
 	scroll-snap-type: mandatory; /* for ff */
@@ -176,7 +171,7 @@ div#buttonContainer > div.wrapper a:hover {
 div#home {
 	/* Home page */
 	background-image: url('img/layered-waves-haikei-home.svg');
-	height: 100vh;
+	height: calc(1px + 100vh);
 }
 
 div#hometext {
@@ -218,9 +213,10 @@ div#hometext > p {
 /* Page 2 - About Me */
 
 div#aboutme {
+	top: -1px;
+	height: calc(1px + 200vh);
 	background-image: url('img/stacked-waves-haikei-aboutme.svg');
 	overflow: hidden;
-	height: 200vh;
 	width: 100%;
 	position: relative;
 }
@@ -387,6 +383,7 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
+	top: -2px;
 	background-image: url('img/stacked-waves-haikei-work.svg');
 	position: relative;
 	width: 100%;
@@ -550,6 +547,7 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 
 div#contact {
 	/* Contact me page */
+	top: -3px;
 	background-color: #1a201a;
 	border-top: 5px solid #1ccad8;
 	z-index: 5;

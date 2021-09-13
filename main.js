@@ -73,7 +73,6 @@ window.onload = () => {
 				0
 			) /
 			(window.innerHeight / 1.3);
-		console.log(percent);
 		percent = 100 - 100 * clamp(percent, 0, 1);
 		aboutP.style.backgroundImage = `linear-gradient(
 			to top,
