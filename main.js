@@ -138,20 +138,11 @@ window.onload = () => {
 			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
 			card.style.opacity = percent;
 		});
-		// Img fade effect
-		// const imgs = [...document.getElementsByClassName('image')];
-		// imgs.forEach(img => {
-		// 	let percent =
-		// 		(window.innerHeight - img.getBoundingClientRect().y) /
-		// 		(window.innerHeight / 2.5);
-		// 	percent = clamp(Math.pow(Math.max(percent, 0), 1.4), 0, 1);
-		// 	img.style.opacity = percent;
-		// });
 		// contact page effects
 		const form = document.getElementById('formwrapper');
 		const text = document.getElementById('textwrapper');
 		percent =
-			(window.innerHeight - form.getBoundingClientRect().y) /
+			(window.innerHeight - text.getBoundingClientRect().y) /
 			(window.innerHeight / 2.5);
 		percent = 1 - clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
 		console.log(percent);

@@ -260,6 +260,8 @@ div#aboutme > div.section > div.wrapper > p {
 	padding: 20px;
 	font-size: 3.3rem;
 	background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -269,7 +271,7 @@ div#aboutme > div.section {
 	/* the 2 sections */
 	position: absolute;
 	width: 45%;
-	min-width: min(950px, 95vw); /* css has min and max??? 🤯 */
+	min-width: 	min(750px, 95vw); /* css has min and max??? 🤯 */
 	left: 50%;
 	transform: translateX(-50%);
 	height: 45%;
@@ -397,6 +399,8 @@ div#mywork > div#work-header {
 
 div#work-header > * {
 	background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
