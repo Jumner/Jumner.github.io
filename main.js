@@ -138,15 +138,15 @@ window.onload = () => {
 			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
 			card.style.opacity = percent;
 		});
-		// contact page effects
-		const form = document.getElementById('formwrapper');
-		const text = document.getElementById('textwrapper');
-		percent =
-			(window.innerHeight - text.getBoundingClientRect().y) /
-			(window.innerHeight / 2.5);
-		percent = 1 - clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
-		form.style.left = (-percent * window.innerWidth) / 2 + 'px';
-		text.style.right = (-percent * window.innerWidth) / 2 + 'px';
+		// // contact page effects
+		// const form = document.getElementById('formwrapper');
+		// const text = document.getElementById('textwrapper');
+		// percent =
+		// 	(window.innerHeight - text.getBoundingClientRect().y) /
+		// 	(window.innerHeight / 2.5);
+		// percent = 1 - clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
+		// form.style.left = (-percent * window.innerWidth) / 2 + 'px';
+		// text.style.right = (-percent * window.innerWidth) / 2 + 'px';
 	};
 
 	// Date handling
@@ -260,7 +260,7 @@ function popup(success, header, text) {
 	}, 10000);
 }
 
-async function contactSubmit() {
+function contactSubmit() {
 	let inputs = ['fullname', 'contactinfo', 'message'];
 	inputs = inputs.map(input => {
 		let inp = document.getElementById(input);
@@ -278,7 +278,7 @@ async function contactSubmit() {
 	} else {
 		// No errors were found
 		const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
-		await fetch('http://localhost:8080/', {
+		fetch('http://localhost:8080/', {
 			method: 'POST',
 			body: JSON.stringify(data),
 			mode: 'cors',

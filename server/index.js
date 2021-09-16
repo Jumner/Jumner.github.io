@@ -4,7 +4,9 @@ const server = http.createServer((req, res) => {
 	// res.writeHead(420); // For reporting issues
 	res.end('good!');
 	req.on('data', data => {
-		console.log(JSON.parse(data.toString()));
+		// Time to handle the data
+		data = JSON.parse(data.toString());
+		console.log(data);
 	});
 });
 const port = 8080;
