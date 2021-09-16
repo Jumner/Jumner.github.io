@@ -260,7 +260,7 @@ function popup(success, header, text) {
 	}, 10000);
 }
 
-function contactSubmit() {
+async function contactSubmit() {
 	let inputs = ['fullname', 'contactinfo', 'message'];
 	inputs = inputs.map(input => {
 		let inp = document.getElementById(input);
@@ -277,22 +277,36 @@ function contactSubmit() {
 		popup(false, 'Error', 'Please fill out all of the input boxes.');
 	} else {
 		// No errors were found
-		popup(
-			true,
-			'Form Submitted!',
-			"This message confirms that my server is running and that I've been notified. Thanks for reaching out! 😁"
+		const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
+		await fetch('http://localhost:8080/', {
+			method: 'POST',
+			body: JSON.stringify(data),
+			mode: 'cors',
+		}).then(
+			res => {
+				if (res.ok) {
+					popup(
+						true,
+						'Form Submitted!',
+						"This message confirms that my server is running and that I've been notified. Thanks for reaching out! 😁"
+					);
+				} else {
+					popup(
+						false,
+						'Error',
+						'You should never see this message, but if you do, there is some weirdness going on with my server, Try again later, or just send me an email.'
+					);
+				}
+				console.log(res.status);
+			},
+			err => {
+				popup(
+					false,
+					'Error',
+					'It seems that the server is down right now. The raspberry pi that im running it on is probably unplugged. In that case, send me an email!'
+				);
+				console.error(err);
+			}
 		);
 	}
-	const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
-	fetch('http://localhost:8080/', {
-		method: 'POST',
-		body: JSON.stringify(data),
-		headers: {
-			Origin: 'http://localhost:5500/',
-		},
-		mode: 'cors',
-	}).then(res => {
-		console.log(res);
-	});
-	console.log(inputs); // Well handle this later
 }
