@@ -1,9 +1,13 @@
 const http = require('http');
 const server = http.createServer((req, res) => {
-	res.writeHead(200);
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5500');
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	// res.writeHead(200);
 	res.end('good!');
-	console.log(req);
+	req.on('data', data => {
+		console.log(JSON.parse(data.toString()));
+	});
 });
-server.listen(8080);
-console.log('Listening on port 8080');
+const port = 8080;
+server.listen(8080, 'localhost', () => {
+	console.log(`Listening on port ${port}`);
+});

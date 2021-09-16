@@ -283,12 +283,14 @@ function contactSubmit() {
 			"This message confirms that my server is running and that I've been notified. Thanks for reaching out! 😁"
 		);
 	}
+	const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
 	fetch('http://localhost:8080/', {
 		method: 'POST',
-		body: JSON.stringify({ data: inputs }),
+		body: JSON.stringify(data),
 		headers: {
-			'Content-Type': 'application/json',
+			Origin: 'http://localhost:5500/',
 		},
+		mode: 'cors',
 	}).then(res => {
 		console.log(res);
 	});
