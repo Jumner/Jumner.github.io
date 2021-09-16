@@ -154,7 +154,6 @@ window.onload = () => {
 			(window.innerHeight - form.getBoundingClientRect().y) /
 			(window.innerHeight / 2.5);
 		percent = 1 - clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
-		console.log(percent);
 		form.style.left = (-percent * window.innerWidth) / 2 + 'px';
 		text.style.right = (-percent * window.innerWidth) / 2 + 'px';
 	};
@@ -293,5 +292,14 @@ function contactSubmit() {
 			"This message confirms that my server is running and that I've been notified. Thanks for reaching out! 😁"
 		);
 	}
+	fetch('http://localhost:8080/', {
+		method: 'POST',
+		body: JSON.stringify({ data: inputs }),
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	}).then(res => {
+		console.log(res);
+	});
 	console.log(inputs); // Well handle this later
 }
