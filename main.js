@@ -214,6 +214,8 @@ window.onload = () => {
 function flip(cell) {
 	cell.timeout = setTimeout(() => {
 		if (!cell.on) return; // Make sure it wont flip if being hovered
+		cell.style.transform = 'rotateX(90deg)';
+		setTimeout(() => {
 		let oldHtml = cell.innerHTML;
 		cell.innerHTML = ''; // Clear past card
 		cell.appendChild(
@@ -224,7 +226,9 @@ function flip(cell) {
 				.random().element
 		);
 		flip(cell);
-	}, 5000 + 15000 * Math.random());
+		cell.style.transform = 'rotateX(0deg)';
+	}, 500);
+	}, 10000 + 10000 * Math.random());
 }
 
 function popup(success, header, text) {

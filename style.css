@@ -298,6 +298,7 @@ div#projects > div.project-row {
 
 div#projects > div.project-row > div.project-cell {
 	/* Each individual card */
+	transition: transform 0.5s linear;
 	display: table-cell;
 	position: relative;
 }
