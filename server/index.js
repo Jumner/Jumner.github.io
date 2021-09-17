@@ -7,6 +7,7 @@ const client = new discord.Client({
 });
 client.on('ready', () => {
 	console.log('Discord bot running');
+	client.channels.cache.get('888195849119727707').send('Just came online!');
 });
 client.login(token);
 
