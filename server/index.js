@@ -1,4 +1,6 @@
-const http = require('http');
+// const http = require('http');
+const app = require('express')();
+const cors = require('cors');
 
 const discord = require('discord.js');
 const { token } = require('./secret.json');
@@ -11,11 +13,14 @@ client.on('ready', () => {
 });
 client.login(token);
 
-const server = http.createServer((req, res) => {
-	console.log('server 1');
-	res.writeHead(200, {
-		'Access-Control-Allow-Origin': '*',
-	});
+// Server
+app.use(
+	cors({
+		origin: '*',
+	})
+);
+app.use((req, res) => {
+	res.write('Response!'); // Response
 	res.end();
 	req.on('data', data => {
 		// Time to handle the data
@@ -30,7 +35,7 @@ const server = http.createServer((req, res) => {
 		);
 	});
 });
-const port = 8080;
-server.listen(8080, 'localhost', () => {
-	console.log(`Listening on port ${port}`);
+
+app.listen(8080, () => {
+	console.log('Listening on port 8080');
 });
