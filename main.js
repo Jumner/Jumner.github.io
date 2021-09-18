@@ -284,15 +284,13 @@ function contactSubmit() {
 		const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
 		// fetch('http://localhost:8080', {
 		// fetch('http://24.150.208.139:8080', {
-		fetch('https://192.168.50.169:8080', {
+		fetch('http://192.168.50.169:8080', {
 			method: 'POST',
 			referrerPolicy: 'no-referrer',
-			mode: 'no-cors',
-			// mode: 'cors',
 			// headers: {
-			// 	'Referer': 'https://jumner.github.io/',
-			// 	'Accept': 'application/json',
-			// 	'Content-Type': 'application/json',
+			// 'Referer': 'https://jumner.github.io/',
+			// 'Accept': 'application/json',
+			// 'Content-Type': 'application/json',
 			// },
 			body: JSON.stringify(data),
 		}).then(
