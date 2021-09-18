@@ -216,18 +216,18 @@ function flip(cell) {
 		if (!cell.on) return; // Make sure it wont flip if being hovered
 		cell.style.transform = 'rotateX(90deg)';
 		setTimeout(() => {
-		let oldHtml = cell.innerHTML;
-		cell.innerHTML = ''; // Clear past card
-		cell.appendChild(
-			cards
-				.filter(card => {
-					return oldHtml !== card.html; // filter out the same card so no repeats
-				})
-				.random().element
-		);
-		flip(cell);
-		cell.style.transform = 'rotateX(0deg)';
-	}, 500);
+			let oldHtml = cell.innerHTML;
+			cell.innerHTML = ''; // Clear past card
+			cell.appendChild(
+				cards
+					.filter(card => {
+						return oldHtml !== card.html; // filter out the same card so no repeats
+					})
+					.random().element
+			);
+			flip(cell);
+			cell.style.transform = 'rotateX(0deg)';
+		}, 500);
 	}, 10000 + 10000 * Math.random());
 }
 
@@ -287,7 +287,7 @@ function contactSubmit() {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
-				Accept: 'application/json',
+				'Accept': 'application/json',
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(data),
