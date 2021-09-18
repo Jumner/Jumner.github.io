@@ -283,7 +283,7 @@ function contactSubmit() {
 		// No errors were found
 		const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
 		// fetch('http://localhost:8080/', {
-		fetch('http://24.150.208.139:8080/', {
+		fetch('https://24.150.208.139:8080/', {
 			method: 'POST',
 			referrerPolicy: 'no-referrer',
 			// mode: 'cors',
