@@ -12,7 +12,12 @@ client.on('ready', () => {
 client.login(token);
 
 const server = http.createServer((req, res) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.writeHead(200, {
+		'Access-Control-Allow-Origin': '*',
+		// 'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
+		'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+		'Content-Type': 'application/json',
+	});
 	// res.writeHead(420); // For reporting issues
 	res.end('good!');
 	req.on('data', data => {
