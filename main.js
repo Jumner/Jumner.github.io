@@ -287,6 +287,7 @@ function contactSubmit() {
 			method: 'POST',
 			mode: 'cors',
 			headers: {
+				'Referer': 'https://jumner.github.io/',
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
 			},
