@@ -14,12 +14,8 @@ client.login(token);
 const server = http.createServer((req, res) => {
 	res.writeHead(200, {
 		'Access-Control-Allow-Origin': '*',
-		'Access-Control-Allow-Headers':
-			'Origin, X-Requested-With, Content-Type, Accept',
-		'Content-Type': 'application/json',
 	});
-	// res.writeHead(420); // For reporting issues
-	// res.end('good!');
+	res.end();
 	req.on('data', data => {
 		// Time to handle the data
 		data = JSON.parse(data.toString());

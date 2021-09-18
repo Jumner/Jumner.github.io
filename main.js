@@ -285,12 +285,12 @@ function contactSubmit() {
 		// fetch('http://localhost:8080/', {
 		fetch('http://24.150.208.139:8080/', {
 			method: 'POST',
-			mode: 'cors',
-			headers: {
-				'Referer': 'https://jumner.github.io/',
-				'Accept': 'application/json',
-				'Content-Type': 'application/json',
-			},
+			// mode: 'cors',
+			// headers: {
+			// 	'Referer': 'https://jumner.github.io/',
+			// 	'Accept': 'application/json',
+			// 	'Content-Type': 'application/json',
+			// },
 			body: JSON.stringify(data),
 		}).then(
 			res => {
