@@ -12,6 +12,7 @@ client.on('ready', () => {
 client.login(token);
 
 const server = http.createServer((req, res) => {
+	console.log('server 1');
 	res.writeHead(200, {
 		'Access-Control-Allow-Origin': '*',
 	});
