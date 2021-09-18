@@ -22,25 +22,6 @@ a {
 	text-decoration: none;
 }
 
-::-webkit-scrollbar {
-	width: 10px; /* for chrome */
-	scroll-snap-type: mandatory; /* for ff */
-	scrollbar-width: none;
-}
-
-::-webkit-scrollbar-track {
-	background: #1a201a;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: #1ccad8;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #0cf574;
-}
-
 .svg {
 	/* app.haikei.app is amazing 😘 */
 	width: 100%;
@@ -271,7 +252,7 @@ div#aboutme > div.section {
 	/* the 2 sections */
 	position: absolute;
 	width: 45%;
-	min-width: 	min(750px, 95vw); /* css has min and max??? 🤯 */
+	min-width: min(750px, 95vw); /* css has min and max??? 🤯 */
 	left: 50%;
 	transform: translateX(-50%);
 	height: 45%;
