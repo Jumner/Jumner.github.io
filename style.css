@@ -68,7 +68,7 @@ div#sticky > div#stickyContainer {
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
-	font-size: 1.6rem;
+	font-size: max(1.6rem, 10px);
 }
 
 div#stickyContainer p {
@@ -92,7 +92,7 @@ div#buttonContainer {
 	/* Contains all the navigation buttons */
 	display: table;
 	float: right;
-	padding: 25px 0;
+	padding: 2.5rem 0;
 }
 
 div#buttonContainer > div.wrapper {
@@ -129,13 +129,14 @@ div#hometext {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	/* width: 100%; */
 }
 
 div#hometext h2,
 div#hometext p,
 div#hometext a {
 	/* All inner text */
-	margin: 30px;
+	margin: 3rem;
 	color: #1ccad8;
 }
 
@@ -151,12 +152,12 @@ div#hometext > h1 {
 
 div#hometext > h2 {
 	/* Inner medium */
-	font-size: 4rem;
+	font-size: max(4rem, 24px);
 }
 
 div#hometext > p {
 	/* Inner small */
-	font-size: 2rem;
+	font-size: max(2rem, 12px);
 }
 
 /* Page 2 - About Me */
@@ -196,8 +197,8 @@ div#aboutme > div.section > div.wrapper {
 
 div#aboutme > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
-	padding: 20px;
-	font-size: 3.3rem;
+	padding: 2rem;
+	font-size: max(3.3rem, 22px);
 	background-clip: text;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
@@ -314,7 +315,7 @@ p.project-date {
 	position: absolute;
 	right: 0;
 	margin: 2.5rem;
-	font-size: 1.6rem;
+	font-size: max(1.6rem, 10px);
 	color: #1ccad8;
 }
 
@@ -322,7 +323,7 @@ h1.project-desc {
 	/* The quick description of the event */
 	position: absolute;
 	margin: 1rem;
-	font-size: 1.7rem;
+	font-size: max(1.7rem, 9px);
 }
 
 /* Page 3 - My Work */
@@ -338,7 +339,7 @@ div#mywork {
 
 div#mywork > div#work-header {
 	/* Stores the header for the page */
-	padding-top: 150px;
+	padding-top: 7vh;
 	text-align: center;
 }
 
@@ -357,7 +358,7 @@ div#work-header > * {
 
 div#work-header > p {
 	/* Work header text */
-	font-size: 2.4rem;
+	font-size: max(2.4rem, 16px);
 	margin: 20px;
 }
 
@@ -404,8 +405,8 @@ div.work-item > div.wrapper.hover > div.content div.info-wrapper p {
 
 div.work-item > div.wrapper > div.content div.info-wrapper p {
 	/* Main text */
-	margin: 3rem;
-	font-size: 2.6rem;
+	margin: min(1rem, 30px);
+	font-size: max(2.6rem, 15px);
 }
 
 div.work-item > div.wrapper.hover > div.content div.info-wrapper h1 {
@@ -425,7 +426,7 @@ div.work-item > div.wrapper > div.content {
 	/* The content section of the card */
 	left: 0;
 	right: 50%;
-	padding: 20px;
+	padding: 2rem;
 }
 
 div.work-item > div.wrapper.flipped > div.content {
@@ -459,7 +460,7 @@ div.work-item li {
 div.content-wrapper h1 {
 	/* Header with the name of the project */
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 	border-bottom: 3px solid #1ccad8;
 }
 /* info */
@@ -467,7 +468,7 @@ div.content-wrapper > div.info-wrapper > p,
 div.content-wrapper > div.challenge-wrapper > ul {
 	/* Text description of the project */
 	font-size: 2.2rem;
-	padding-left: 20px;
+	padding-left: 2rem;
 }
 div.content-wrapper > div.info-wrapper > h1,
 div.content-wrapper > div.challenge-wrapper > h1 {
@@ -484,7 +485,7 @@ div.content-wrapper > div.challenge-wrapper {
 
 div.content-wrapper > div.challenge-wrapper li {
 	/* Challenge list items */
-	margin: 10px 0;
+	margin: 1rem 0;
 }
 
 /* space */
@@ -500,7 +501,7 @@ div.work-item > div.wrapper > div.space {
 	/* The space/img section of the card */
 	right: 0;
 	left: 50%;
-	padding: 20px;
+	padding: 2rem;
 }
 
 div.work-item > div.wrapper > div.space > * {
@@ -535,7 +536,7 @@ div#textwrapper {
 	height: 100%;
 	left: 50%;
 	transform: translateX(-50%);
-	width: max(50%, 88rem);
+	width: max(50%, 70rem);
 }
 div#textwrapper > * {
 	margin: 4rem;
@@ -559,7 +560,7 @@ div#textwrapper > div.contact.header > h1 {
 	color: #0cf574;
 	border-bottom: 3px solid #0cf574;
 	border-radius: 3px;
-	font-size: 3.2rem;
+	font-size: max(3.2rem, 20px);
 }
 
 div#textwrapper > div.contact.soc::before {
@@ -583,19 +584,19 @@ div#textwrapper > div.contact.emails {
 
 div#textwrapper > div.contact > h1 {
 	/* Section headers */
-	font-size: 3.5rem;
-	margin-bottom: 15px;
+	font-size: max(3.5rem, 19px);
+	margin-bottom: 1.5rem;
 }
 
 div#textwrapper > div.contact p.email:hover:not(.copied),
 div.contact > p.phone:hover:not(.copied) {
 	/* Email and phone hover */
-	color: #0cf574;
+	color: #0cf574 !important;
 	text-decoration-color: #0cf574;
 }
 p.phone {
 	/* Phone number */
-	margin-left: 5rem;
+	margin-left: 2rem;
 }
 p.email,
 p.phone {
@@ -609,12 +610,12 @@ p.copied,
 p.copied:hover {
 	/* Copied email or phone number */
 	color: #1a201a;
-	box-shadow: inset 0 -24px 0 0 #0cf574; /* very noice */
+	box-shadow: inset 0 min(-2.4rem, -15px) 0 0 #0cf574; /* very noice */
 }
 
 div#textwrapper > div.contact.emails > div.contact.grid {
 	/* Grid sections (email) */
-	margin-left: 5rem;
+	margin-left: 2rem;
 	grid-template-columns: 1fr 3fr; /* Titles take 1/4, Emails take 3/4 */
 	display: grid;
 }
@@ -622,7 +623,7 @@ div#textwrapper > div.contact.emails > div.contact.grid {
 div#textwrapper > div.contact > div.contact.grid > p,
 div#textwrapper > div.contact > p {
 	/* Section text (really just the emails) */
-	font-size: 2rem;
+	font-size: max(2rem, 12px);
 }
 
 div#textwrapper > div.contact.phones {
