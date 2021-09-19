@@ -535,7 +535,7 @@ div#textwrapper {
 	height: 100%;
 	left: 50%;
 	transform: translateX(-50%);
-	width: max(50%, 350px);
+	width: max(50%, 88rem);
 }
 div#textwrapper > * {
 	margin: 4rem;

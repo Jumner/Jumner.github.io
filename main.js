@@ -24,6 +24,7 @@ function resize() {
 	const area = window.innerWidth * window.innerHeight;
 	document.documentElement.style.fontSize =
 		Math.round(10 * Math.sqrt(area / 1787520)) + 'px'; // Set default font size (sorry accessability)
+	console.log(Math.round(10 * Math.sqrt(area / 1787520)));
 }
 
 window.onresize = () => {
