@@ -530,7 +530,6 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 }
 
 /* Page 4 - Contact Me */
-
 div#contact {
 	/* Contact me page */
 	margin-top: -1px;
@@ -542,120 +541,19 @@ div#contact {
 	position: relative;
 }
 
-/* form */
-
-div#formwrapper {
-	/* Holds the form */
-	background-color: #1a201a;
-	color: #1ccad8;
-	position: relative;
-	width: max(50%, 670px);
-}
-
-div#formwrapper > form {
-	/* The actual form */
-	display: grid;
-	position: absolute;
-	left: 20px;
-	right: 20px;
-	top: 10px;
-}
-form label:hover {
-	/* Form label and header hover */
-	color: #0cf574;
-}
-
-form > input,
-form > textarea {
-	/* The text boxes in the form */
-	margin: 10px;
-	padding: 20px;
-	border: none;
-	outline: none;
-	border-radius: 7px;
-}
-
-form > h1 {
-	/* Form header */
-	color: #0cf574;
-	border-bottom: 3px solid #0cf574;
-	border-radius: 3px;
-	margin: 10px;
-	grid-row: 1;
-	grid-column: 1 / span 2;
-	text-align: center;
-	font-size: 4.5rem;
-}
-
-form > label.row1 {
-	/* Top 3 labels */
-	grid-row: 2;
-}
-
-form > label {
-	/* Form labels */
-	color: #1ccad8;
-	font-size: 1.9rem;
-	text-align: center;
-}
-
-input#fullname,
-input#contactinfo {
-	/* First 3 inputs */
-	grid-row: 3;
-}
-
-form > label#messagelabel {
-	/* The label for the message box */
-	grid-row: 4;
-	grid-column: 1 / span 2;
-}
-
-form > textarea#message {
-	/* The message text box */
-	resize: none;
-	grid-row: 5;
-	grid-column: 1 / span 2;
-}
-
-form > input#submit {
-	/* Form submit button */
-	background-color: #0cf574;
-	grid-row: 6;
-	grid-column: 1 / span 2;
-	height: 50px;
-}
-
-form > input#submit:hover {
-	box-shadow: inset 0 -50px 0 0 #1ccad8; /* very noice */
-}
-
 /* Text */
 
 div#textwrapper {
 	/* Text info container */
 	position: absolute;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr 2fr;
 	display: grid;
-	bottom: 0;
-	right: 0;
-	width: calc(max(50%, 670px) - 40px);
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: max(50%, 670px);
 	top: 10%;
-}
-
-@media screen and (max-width: 1340px) {
-	div#contact {
-		height: 100vh;
-	}
-	div#formwrapper {
-		transform: translateX(-50%);
-		left: 50%;
-		height: 50%;
-	}
-	div#textwrapper {
-		transform: translateX(-50%);
-		left: 50%;
-		top: 50%;
-	}
 }
 
 div#textwrapper h1,
@@ -666,26 +564,29 @@ div#textwrapper p:not(.copied) {
 
 div#textwrapper > div.contact.header {
 	/* Header section */
-	/* position: relative; */
+	text-align: center;
 	grid-row: 1;
 	grid-column: 1 / span 2;
 }
 
 div#textwrapper > div.contact.header > h1 {
 	/* Text header */
+	color: #0cf574;
+	border-bottom: 3px solid #0cf574;
+	border-radius: 3px;
 	font-size: 3.2rem;
 }
 
-div#textwrapper > div.contact.header > h1::after {
+div#textwrapper > div.contact.soc::before {
 	/* Text divider */
-	position: absolute;
-	background-color: #0cf574;
-	border-radius: 2px;
 	content: '';
-	top: 100px;
-	bottom: 70px;
-	left: 45%;
+	background-color: #0cf574;
 	width: 3px;
+	border-radius: 2px;
+	top: 15%;
+	bottom: 15%;
+	left: 0;
+	position: absolute;
 }
 
 div#textwrapper > div.contact.emails {
@@ -705,6 +606,9 @@ div.contact > p.phone:hover:not(.copied) {
 	color: #0cf574;
 	text-decoration: underline;
 }
+p.phone {
+	margin-left: 5rem;
+}
 p.email,
 p.phone {
 	width: max-content;
@@ -718,6 +622,8 @@ p.copied:hover {
 
 div#textwrapper > div.contact > div.contact.grid {
 	/* Grid sections (email) */
+	margin-left: 5rem;
+	grid-template-columns: 1fr 3fr;
 	display: grid;
 }
 
@@ -727,7 +633,7 @@ div#textwrapper > div.contact > p {
 	font-size: 2rem;
 }
 
-div#textwrapper > div.contact:nth-child(3) {
+div#textwrapper > div.contact.phones {
 	/* Phone section */
 	grid-row: 3;
 	grid-column: 1;
