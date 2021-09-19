@@ -338,6 +338,7 @@ div#mywork {
 
 div#mywork > div#work-header {
 	/* Stores the header for the page */
+	padding-top: 150px;
 	text-align: center;
 }
 
