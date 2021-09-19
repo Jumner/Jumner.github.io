@@ -226,7 +226,7 @@ function flip(cell) {
 					.random().element
 			);
 			flip(cell);
-			cell.style.transform = 'rotateX(0deg)';
+			cell.style.transform = '';
 		}, 500);
 	}, 10000 + 10000 * Math.random());
 }
@@ -283,8 +283,8 @@ function contactSubmit() {
 		// No errors were found
 		const data = { Name: inputs[0], Info: inputs[1], Message: inputs[2] };
 		// fetch('http://localhost:8080', {
-		fetch('http://24.150.208.139:8080', {
-			// fetch('http://192.168.50.169:8080', {
+		// fetch('http://24.150.208.139:8080', {
+		fetch('http://192.168.50.169:8080', {
 			method: 'POST',
 			referrerPolicy: 'no-referrer',
 			// headers: {
