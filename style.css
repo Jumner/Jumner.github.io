@@ -30,67 +30,34 @@ a {
 	background-position: center;
 	background-size: cover;
 }
-/* popup */
-div#popup {
-	border-radius: 18px;
-	position: fixed;
+
+h1.header::after {
+	/* Header underline */
+	transition: width 0.5s ease-in-out;
 	display: block;
-	top: 50%;
+	content: '';
+	width: 5rem;
 	left: 50%;
-	width: 450px;
-	height: 350px;
-	transform: translate(-50%, -50%);
-	z-index: 10;
-}
-
-div#popup.success {
-	background-color: #0cf574;
-}
-
-div#popup.fail {
-	background-color: crimson;
-}
-
-div#popup div.button svg {
-	width: 40px;
-	height: 40px;
-}
-
-div#popup div.button {
+	transform: translateX(-50%);
+	margin-top: 5px;
 	position: absolute;
-	right: 15px;
-	border-radius: 50%;
-	top: 15px;
+	height: 5px;
+	background-color: #1a201a;
 }
 
-div#popup > div#popup-text {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 55px; /* 40 + 15 😎 */
-	padding: 50px;
+h1.header:hover::after {
+	/* Header underline hover */
+	border-radius: 3px;
+	width: 90%;
 }
 
-div#popup-text h1 {
-	font-size: 40px;
-	margin-bottom: 15px;
-}
-
-div#popup-text p {
-	font-size: 24px;
-}
-
-div#popup div.button:hover svg {
-	transform: rotate(90deg);
-}
-
-/* Header */
+/* Nav */
 
 div#sticky {
-	/* Sticky header outer div */
+	/* Sticky (I realized fixed exists) header outer div */
 	z-index: 2;
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top: 0;
 }
 
@@ -105,6 +72,7 @@ div#sticky > div#stickyContainer {
 }
 
 div#stickyContainer p {
+	/* Nav name and link text */
 	color: #1ccad8;
 }
 
@@ -172,7 +140,7 @@ div#hometext a {
 }
 
 div#hometext a:hover {
-	/* Main text hover */
+	/* Main text (links) hover */
 	color: #0cf574;
 }
 
@@ -194,6 +162,7 @@ div#hometext > p {
 /* Page 2 - About Me */
 
 div#aboutme {
+	/* The polished about me page */
 	top: -1px;
 	height: calc(1px + 200vh);
 	background-image: url('img/stacked-waves-haikei-aboutme.svg');
@@ -203,6 +172,7 @@ div#aboutme {
 }
 
 hr#aboutHr {
+	/* The horizontal rule */
 	border: none;
 	border-top: 5px dotted #1a201a;
 	position: absolute;
@@ -215,18 +185,6 @@ h1.abouth1 {
 	text-align: center;
 	position: relative;
 	font-size: 6rem;
-}
-
-h1.abouth1::after {
-	display: block;
-	content: '';
-	width: 50px;
-	margin-left: -25px;
-	margin-top: 5px;
-	left: 50%;
-	position: absolute;
-	height: 5px;
-	background-color: #1a201a;
 }
 
 div#aboutme > div.section > div.wrapper {
@@ -258,7 +216,7 @@ div#aboutme > div.section {
 	height: 45%;
 }
 
-div#aboutme > div.section:nth-child(3) {
+div#aboutme > div.section:nth-of-type(2) {
 	/* The second section*/
 	top: 50%;
 	padding: 5% 5%;
@@ -305,10 +263,17 @@ div.project-card:hover {
 	bottom: 0;
 	left: 0;
 }
-
+div.project-card:hover h1.project-desc {
+	/* Text on card hover (Keeps the text from moving) */
+	padding: 2%;
+}
 div.project-card:hover > div.card-bot {
 	/* Bottom when card hover */
 	background-color: #0cf574;
+}
+div.project-card:hover p.project-date {
+	/* Project date when card hover */
+	color: #0cf574;
 }
 
 div.project-card > div {
@@ -329,7 +294,6 @@ div.project-card > div.card-bot {
 	/* The bottom section of the card */
 	top: 50%;
 	background-color: #1ccad8;
-	color: #1a201a;
 }
 div.project-cell:nth-child(2) > div.project-card > div.card-top {
 	/* The flipped top section */
@@ -341,6 +305,7 @@ div.project-cell:nth-child(2) > div.project-card > div.card-bot {
 }
 
 div.project-cell:nth-child(2) > div.project-card p.project-date {
+	/* Reposition date if card is flipped */
 	bottom: 0;
 }
 
@@ -348,18 +313,15 @@ p.project-date {
 	/* The text that has the date of event */
 	position: absolute;
 	right: 0;
-	margin: 10px;
+	margin: 2.5rem;
 	font-size: 1.6rem;
 	color: #1ccad8;
-}
-div.project-card:hover p.project-date {
-	color: #0cf574;
 }
 
 h1.project-desc {
 	/* The quick description of the event */
 	position: absolute;
-	margin: 10px;
+	margin: 1rem;
 	font-size: 1.7rem;
 }
 
@@ -367,7 +329,7 @@ h1.project-desc {
 
 div#mywork {
 	/* The page for my big projects */
-	top: -1px;
+	margin-top: -2px;
 	background-image: url('img/stacked-waves-haikei-work.svg');
 	position: relative;
 	width: 100%;
@@ -379,7 +341,13 @@ div#mywork > div#work-header {
 	text-align: center;
 }
 
+div#work-header h1:hover::after {
+	/* Main header underline */
+	width: 45%;
+}
+
 div#work-header > * {
+	/* All header text (for animation) */
 	background-clip: text;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
@@ -393,13 +361,14 @@ div#work-header > p {
 }
 
 div#work-header > h1 {
+	/* Work header header */
 	font-size: 7rem;
 }
 
 div.work-item {
-	/* Work card generated with js */
+	/* Work card (generated with js) */
 	height: 75vh;
-	margin: 20px 0;
+	margin: 5rem 0;
 	position: relative;
 }
 
@@ -408,33 +377,38 @@ div.work-item > div.wrapper {
 	background-color: #1a201a;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 50%;
 	height: 100%;
+	width: 50%;
 	min-width: min(750px, 95vw);
 	position: absolute;
 	border-radius: 30px;
 }
 
 div.work-item > div.wrapper.hover {
-	width: 95%;
+	/* Inner wrapper hover (Its a class because js dynamically hides the ul) */
+	width: 90%;
 	border: 3px solid #0cf574;
 }
 
 div.work-item > div.wrapper.hover > div.content div.challenge-wrapper {
+	/* The ul with challenges and things I learned */
 	display: block;
 }
 
 div.work-item > div.wrapper.hover > div.content div.info-wrapper p {
+	/* Main text when hovered */
 	font-size: 2.4rem;
 	margin: 0;
 }
 
 div.work-item > div.wrapper > div.content div.info-wrapper p {
+	/* Main text */
 	margin: 30px;
 	font-size: 2.6rem;
 }
 
-div.work-item > div.wrapper:hover > div.content div.info-wrapper h1 {
+div.work-item > div.wrapper.hover > div.content div.info-wrapper h1 {
+	/* Text header when hovered */
 	color: #0cf574;
 	border-bottom: 3px solid #0cf574;
 }
@@ -451,20 +425,6 @@ div.work-item > div.wrapper > div.content {
 	left: 0;
 	right: 50%;
 	padding: 20px;
-}
-
-div.work-item > div.wrapper > div.space {
-	/* The space/img section of the card */
-	right: 0;
-	left: 50%;
-	padding: 20px;
-}
-
-div.work-item > div.wrapper > div.space > * {
-	border-radius: 10px;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
 }
 
 div.work-item > div.wrapper.flipped > div.content {
@@ -491,6 +451,7 @@ div.work-item > div.wrapper > div.content > div.content-wrapper {
 div.work-item h1,
 div.work-item p,
 div.work-item li {
+	/* Set text colour */
 	color: #1ccad8;
 }
 
@@ -501,12 +462,16 @@ div.content-wrapper h1 {
 	border-bottom: 3px solid #1ccad8;
 }
 /* info */
-
 div.content-wrapper > div.info-wrapper > p,
 div.content-wrapper > div.challenge-wrapper > ul {
 	/* Text description of the project */
-	font-size: 2rem;
+	font-size: 2.2rem;
 	padding-left: 20px;
+}
+div.content-wrapper > div.info-wrapper > h1,
+div.content-wrapper > div.challenge-wrapper > h1 {
+	/* Info wrapper header */
+	font-size: 3.4rem;
 }
 /* challenge */
 div.content-wrapper > div.challenge-wrapper {
@@ -517,6 +482,7 @@ div.content-wrapper > div.challenge-wrapper {
 }
 
 div.content-wrapper > div.challenge-wrapper li {
+	/* Challenge list items */
 	margin: 10px 0;
 }
 
@@ -529,7 +495,23 @@ div.work-item > div.wrapper > div.space > div.space-wrapper {
 	position: relative;
 }
 
+div.work-item > div.wrapper > div.space {
+	/* The space/img section of the card */
+	right: 0;
+	left: 50%;
+	padding: 20px;
+}
+
+div.work-item > div.wrapper > div.space > * {
+	/* Images and content of item */
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
 /* Page 4 - Contact Me */
+
 div#contact {
 	/* Contact me page */
 	margin-top: -1px;
@@ -603,33 +585,39 @@ div#textwrapper > div.contact > h1 {
 
 div#textwrapper > div.contact p.email:hover:not(.copied),
 div.contact > p.phone:hover:not(.copied) {
+	/* Email and phone hover */
 	color: #0cf574;
-	text-decoration: underline;
+	text-decoration-color: #0cf574;
 }
 p.phone {
+	/* Phone number */
 	margin-left: 5rem;
 }
 p.email,
 p.phone {
+	/* Email and phone number */
+	text-decoration: underline;
+	text-decoration-color: rgba(0, 0, 0, 0); /* So that it still transitions */
 	width: max-content;
 	transition: 0.25s all;
 }
 p.copied,
 p.copied:hover {
+	/* Copied email or phone number */
 	color: #1a201a;
 	box-shadow: inset 0 -24px 0 0 #0cf574; /* very noice */
 }
 
-div#textwrapper > div.contact > div.contact.grid {
+div#textwrapper > div.contact.emails > div.contact.grid {
 	/* Grid sections (email) */
 	margin-left: 5rem;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 3fr; /* Titles take 1/4, Emails take 3/4 */
 	display: grid;
 }
 
 div#textwrapper > div.contact > div.contact.grid > p,
 div#textwrapper > div.contact > p {
-	/* Section text */
+	/* Section text (really just the emails) */
 	font-size: 2rem;
 }
 
@@ -641,7 +629,7 @@ div#textwrapper > div.contact.phones {
 
 /* socials */
 
-div#textwrapper > div.contact:nth-child(4) {
+div#textwrapper > div.contact.soc {
 	/* Socials section */
 	text-align: center;
 	grid-row: 2 / span 2;
@@ -650,6 +638,7 @@ div#textwrapper > div.contact:nth-child(4) {
 }
 
 div#social-wrapper {
+	/* Container of the three socials */
 	position: absolute;
 	top: 50%;
 	left: 10%;
@@ -659,6 +648,7 @@ div#social-wrapper {
 }
 
 a.socials {
+	/* Each social link (done by js) */
 	top: 100px;
 	margin-left: 50%;
 	transform: translateX(-50%);
@@ -666,17 +656,21 @@ a.socials {
 }
 
 svg.socials {
+	/* Social icons */
 	transition: all 0.5s ease-in-out;
 	width: 64px;
 	height: 64px;
 }
+
 svg.socials:hover {
+	/* Social icon hovers */
 	transform: rotate(360deg);
 }
-
 svg.socials path.blue {
+	/* Default social colour */
 	fill: #1ccad8;
 }
 svg.socials:hover path.blue {
+	/* Social hover colour */
 	fill: #0cf574;
 }
