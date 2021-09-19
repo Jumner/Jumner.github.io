@@ -565,8 +565,9 @@ div#textwrapper > div.contact.soc::before {
 	background-color: #0cf574;
 	width: 3px;
 	border-radius: 2px;
-	top: 15%;
-	bottom: 15%;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 70%;
 	left: 0;
 	position: absolute;
 }

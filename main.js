@@ -31,6 +31,8 @@ window.onresize = () => {
 };
 
 window.onload = () => {
+	const animationStyle = document.createElement('style');
+	document.head.appendChild(animationStyle);
 	// Wait for page to load
 	resize(); // Set stuff based on window size
 	if (inIframe()) {
@@ -139,14 +141,23 @@ window.onload = () => {
 			card.style.opacity = percent;
 		});
 		// // contact page effects
-		// const form = document.getElementById('formwrapper');
-		// const text = document.getElementById('textwrapper');
-		// percent =
-		// 	(window.innerHeight - text.getBoundingClientRect().y) /
-		// 	(window.innerHeight / 2.5);
-		// percent = 1 - clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
-		// form.style.left = (-percent * window.innerWidth) / 2 + 'px';
-		// text.style.right = (-percent * window.innerWidth) / 2 + 'px';
+		const text = document.getElementById('soc');
+		percent =
+			(window.innerHeight - text.getBoundingClientRect().y) /
+			(window.innerHeight / 3);
+		percent = clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
+		animationStyle.innerHTML = `div#textwrapper > div.contact.soc::before {height: ${Math.floor(
+			70 * percent
+		)}%;}`;
+
+		const socials = [...document.getElementsByClassName('socials')].filter(
+			element => {
+				return element.tagName === 'svg';
+			}
+		);
+		socials.forEach((social, i) => {
+			social.style.opacity = percent + i / 4;
+		});
 	};
 
 	// Date handling
