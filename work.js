@@ -89,6 +89,13 @@ let projects = [
 		'<iframe src="index.html" style="border:none;" width="100%" height="100%" title="My website IN my website!"></iframe>'
 	),
 	new project(
+		'Cubic',
+		'Inspired but Cubli, I designed, build and programmed a cube that can balance itself using 3 reaction wheels. This project is what convinced me to go into mechatronics engineering and pursue contorl. I learned a lot about linear optimal control even though I only used PID. I plan on updating it with a better controller using stability analysis.',
+		['Embedded C++ programming (with Arduino)', 'Communication Protocols (Spi, I2C, Serial)', 'Application of Control and PID tuning', 'Design and assembly of complex structures', 'Project management'],
+		'<div class="space-wrapper" style="background-image: url(\'https://user-images.githubusercontent.com/69999075/175431668-324ac41d-5c04-4bda-bd9f-c9cc0a512682.jpg\')">',
+		'https://github.com/Jumner/cubicFirmware'
+	),
+	new project(
 		'Turing Vscode',
 		'An extension to a popular code editor that adds support for a educational programming language that is rarely used. Because of my situation, I was forced to use a text editor to write code in this language. One day I had enough with the auto-detected language making half of the text green. I set out to just colour the text properly. I got a bit carried away and got really close to full language support. You can even run your code straight from the text editor!',
 		[
@@ -98,15 +105,5 @@ let projects = [
 		],
 		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">',
 		'https://github.com/Jumner/TuringVscode'
-	),
-	new project(
-		'Do Work',
-		'Because my high school used google classroom, I wrote a program that connects to the google api and grabs all my unsubmitted school projects. If there are any, It closes all unproductive programs on my computer. The only problem is that my high school switched to a new worse program. I might re-do this project as brightspace does have its own api.',
-		[
-			'One problem is that the google api for google classroom was not very clear for what I needed it for. There are a lot of steps in the process of grabbing the projects. You have to filter through all courses past and present, then sort everything for assignments, sort for ones with due dates, then check if they are submitted. A lot of places to get stuck.',
-			'This was my first real experience with api. I spent many late nights trying to get it to work, and it was very satisfying to see it work.',
-			'I also learned how to close programs with code. It might sound simple, but you have to write a program that filters through individual threads and checks what program they are associated with.',
-		],
-		'<div class="space-wrapper" style="background-image: url(\'img/white.jpeg\')">'
 	),
 ];
