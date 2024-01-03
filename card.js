@@ -35,7 +35,7 @@ class card {
 let cards = [
 	new card(
 		'July 2013',
-		'Learned my first programming language (Javascript) because I wanted to make Minecraft Mods. I never did get around to it.'
+		'I taught myself Javascript because I wanted to make Minecraft Mods. I never did get around to it.'
 	),
 	new card(
 		'December 2013',
@@ -47,11 +47,11 @@ let cards = [
 	),
 	new card(
 		'June 2014',
-		'Messed around with creating a simple text bot. It was really a pile of if statements, but I taught me a lot.'
+		'Messed around with creating a simple chat bot. It was really a pile of if statements, but it taught me a lot.'
 	),
 	new card(
 		'September 2014',
-		'Built a simple website/game where you can click on website elements to make the disappear. This taught me how to modify websites with code.'
+		'Built a simple website/game where you can click on website elements to make the disappear. This taught me how to use the DOM.'
 	),
 	new card(
 		'August 2014',
@@ -59,7 +59,7 @@ let cards = [
 	),
 	new card(
 		'February 2015',
-		'Got a Raspberry pi and started learning the linux command line, and started messing with dc circuits.'
+		'Got a Raspberry pi and started learning the linux command line. I also started messing with dc circuits.'
 	),
 	new card(
 		'August 2015 ',
@@ -75,15 +75,15 @@ let cards = [
 	),
 	new card(
 		'December 2016',
-		'Found a mod that allowed me to write code to control virtual rockets. This taught me so much about control theory and 3d rotation.'
+		'Used Kerbal Space Program to write code to control virtual rockets. This taught me so much about control theory and 3d rotation.'
 	),
 	new card(
 		'April 2017',
-		'I created a simple website that stores a collection of little sites. It included stuff like prime number finders, pi calculators, etc...'
+		'I created a simple website that stores a collection of little pages. It included stuff like prime number finders, pi calculators, etc...'
 	),
 	new card(
 		'June 2017',
-		'I built a platformer game using only Javascript and the html canvas. This game had physics, animations, and a level editor. I also got used to using github.'
+		'I built a platformer game using only Javascript and the HTML canvas. This game had physics, animations, and a level editor. I also got used to using github.'
 	),
 	new card(
 		'September 2017',
@@ -95,15 +95,15 @@ let cards = [
 	),
 	new card(
 		'February 2018',
-		'After reading that Spacex uses c++ for their software, I thought that I would want to find out why. Turns out its really robust and my second favorite language.'
+		'After reading that Spacex uses c++ for a lot of their software, I decided to find out why. I found out I really like low level languages.'
 	),
 	new card(
 		'April 2018',
-		'I learned about ray tracing and was still hooked on making my own 3d. I did learn quite a bit about geometry before realizing that it was very difficult.'
+		'I learned about ray tracing and was still hooked on making my own 3d renderer. I learned a alot of geometry before realizing that it was very difficult.'
 	),
 	new card(
 		'May 2018',
-		'Learned about how neural networks work and made a semi working network with a really strange structure. It did manage to complete the xor gate.'
+		'Learned about how neural networks work and made a semi working network with a really strange structure. It did manage to complete the xor test.'
 	),
 	new card(
 		'February 2019',
@@ -111,23 +111,23 @@ let cards = [
 	),
 	new card(
 		'July 2019',
-		"I made a program that connects to the google classroom api and checks if there are any assignments that I hadn't completed. If there are any, it closes distractions"
+		"I made a program that connects to the google classroom api and checks for any pending assignments. If there are any, it closes distractions"
 	),
 	new card(
 		'September 2019',
-		'I got a chromebook and they added a built in linux virtual machine. This is really where I learned how to use the linux command line.'
+		'I got a chromebook and they added a built in Linux virtual machine. This is really where I learned how to use the Linux command line.'
 	),
 	new card(
 		'October 2019',
-		'I watched a series on youtube about a guy who built a computer on breadboards. It really showed me how computers actually work.'
+		'I watched Ben Eaters 8 bit breadboard computer series. It opened my eyes to computer architecture and inspired me to make my own computer in Minecraft.'
 	),
 	new card(
 		'December 2019',
-		'I learned about the unity game engine and messed around with making mods for games.'
+		'I learned about the Unity game engine and messed around with making mods for games.'
 	),
 	new card(
 		'February 2020',
-		'I actually learned how rasterization works and learned how matrices can represent rotation and translation'
+		'I actually learned how rasterization works and learned how matrices can represent rotation and translation.'
 	),
 	new card(
 		'February 2020',
@@ -135,7 +135,7 @@ let cards = [
 	),
 	new card(
 		'June 2020',
-		"To challenge myself, I also created a simple 3d wireframe engine in a dated language called Turing. I wasn't sure that Turing was fast enough but it was."
+		"To challenge myself, I also created a simple 3d wireframe engine in a language called Turing. I wasn't sure that Turing was fast enough but it was."
 	),
 	new card(
 		'October 2020',
@@ -143,15 +143,11 @@ let cards = [
 	),
 	new card(
 		'November 2020',
-		'I learned how modular linux can be. I always loved development in linux and I never realized that it can look nicer than windows. I now use it for almost everything.'
+		'I learned about Linux customization. I always loved linux development but I never considered that it can look nicer than windows. I now use it for almost everything.'
 	),
 	new card(
 		'December 2020',
-		"I made a game with the unity game engine and though it was not super functional, it taught me a lot about learning to make games when I don't have full control."
-	),
-	new card(
-		'May 2021',
-		"I made an extension for a code editor called Vscode. It adds support for a language called Turing. It wasn't perfect, but it was about as close as I could get."
+		"I made a game with the unity game engine and though it was not super functional, it taught me a lot about programming when I don't have full control."
 	),
 	new card(
 		'August 2021',
@@ -167,7 +163,7 @@ let cards = [
 	),
 	new card(
 		'October 2021',
-		'Designed a printed circuit board based on the esp32 for Cubic in just 1 week. Probably should have spent longer because I underspeced the power supply circuitry.'
+		'Designed a printed circuit board based on the esp32 in just 1 week. Probably should have spent longer because I underspeced the power supply circuitry.'
 	),
 	new card(
 		'October 2021',
@@ -175,19 +171,19 @@ let cards = [
 	),
 	new card(
 		'November 2021',
-		'I worked with a friend to make our school\' hackaton website in just one weekend. This was my first experience of collaborative development and it was super smooth.'
+		'I worked with a friend to make our school\' hackaton website in just one weekend. This was my first experience of collaborative development.'
 	),
 	new card(
 		'November 2021',
-		'Learned embedded programming using Rust and got PWM, and I2C working for my cube. Software interrupts got me stuck so I went to arduino.'
+		'Learned embedded programming using Rust and got PWM, I2C, and hardware interrupts working. Software interrupts got me stuck so I moved to arduino.'
 	),
 	new card(
 		'November 2021',
-		'Got my Cubic motors spinning with tachometer readings using the datasheet.'
+		'Guided by the datasheet, I got my Cubic motors spinning with tachometer readings.'
 	),
 	new card(
 		'Novmeber 2021',
-		'Taught myself state space modelling and modelled my inverted pendulum, Cubic.'
+		'Taught myself state space modelling and modelled my 3d inverted pendulum reaction wheel cube, Cubic.'
 	),
 	new card(
 		'December 2021',
@@ -199,7 +195,7 @@ let cards = [
 	),
 	new card(
 		'February 2022',
-		'Made a simple todo app to understand cli using clap.',
+		'Made a simple todo app written in Rust to understand cli using clap.',
 	),
 	new card(
 		'February 2022',
@@ -207,15 +203,15 @@ let cards = [
 	),
 	new card(
 		'April 2022',
-		'Made a GPT-3 API wrapper in rust. This allowed me to use the LLM and adjust its parameters from the comamnd line.',
+		'Made a GPT-3 API wrapper in Rust. This allowed me to use the LLM and adjust its parameters from the comamnd line.',
 	),
 	new card(
 		'April 2022',
-		'Made a bot that solves that test tube pour sorting mobile game. Written in rust, I am very proud of the algorithm I made. I also got used to testing.'
+		'Made a bot that solves that test tube pour sorting mobile game. Written in Rust, I am very proud of the algorithm I made. I also got used to testing.'
 	),
 	new card(
 		'April 2022',
-		'Wrote a cli application where I can give it a program that I need but will forget about next time I reinstall and it saves it to a file and can reinstall it automatically.'
+		'Wrote a CLI application to keep track of the programs that I need on my computer. It stores them and allows me to reinstall them from a script.'
 	),
 	new card(
 		'June 2022',
