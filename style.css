@@ -68,7 +68,7 @@ div#sticky > div#stickyContainer {
 	position: absolute; /* so it wont take space */
 	display: table;
 	width: 100%;
-	font-size: max(1.6rem, 10px);
+	font-size: max(2.6rem, 16px);
 }
 
 div#stickyContainer p {
@@ -165,7 +165,7 @@ div#hometext > p {
 div#aboutme {
 	/* The polished about me page */
 	top: -1px;
-	height: calc(1px + 200vh);
+	height: calc(1px + 220vh);
 	background-image: url('img/stacked-waves-haikei-aboutme.svg');
 	overflow: hidden;
 	width: 100%;
@@ -177,7 +177,7 @@ hr#aboutHr {
 	border: none;
 	border-top: 5px dotted #1a201a;
 	position: absolute;
-	top: 50%;
+	top: 40%;
 }
 
 h1.abouth1 {
@@ -186,6 +186,12 @@ h1.abouth1 {
 	text-align: center;
 	position: relative;
 	font-size: 6rem;
+}
+div#aboutme > div > p {
+	/* Little Things header text */
+	position: relative;
+	font-size: max(2.4rem, 16px);
+	margin: 20px;
 }
 
 div#aboutme > div.section > div.wrapper {
@@ -211,23 +217,27 @@ div#aboutme > div.section {
 	/* the 2 sections */
 	position: absolute;
 	width: 45%;
-	min-width: min(750px, 95vw); /* css has min and max??? 🤯 */
+	min-width: min(750px, 90vw); /* css has min and max??? 🤯 */
 	left: 50%;
 	transform: translateX(-50%);
-	height: 45%;
+	height: 35%;
 }
 
 div#aboutme > div.section:nth-of-type(2) {
 	/* The second section*/
-	top: 50%;
+	display: flex;
+	flex-direction: column;
+	height: 55%;
+	top: 40%;
 	padding: 5% 5%;
 }
 
 div#projects {
 	/* Stores project cards */
 	width: 100%;
-	height: 85%;
+	height: 100%;
 	display: table;
+	padding-bottom: 5%;
 }
 
 div#projects > div.project-row {
@@ -255,6 +265,7 @@ div.project-card {
 	border-radius: 2.5rem;
 	background-color: #1a201a;
 	border: 5px solid #1a201a;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 16px 4px; /*color inset shift blur radius */
 }
 
 div.project-card:hover {
@@ -263,6 +274,7 @@ div.project-card:hover {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 32px 8px;
 }
 div.project-card:hover h1.project-desc {
 	/* Text on card hover (Keeps the text from moving) */
@@ -384,12 +396,19 @@ div.work-item > div.wrapper {
 	min-width: min(750px, 95vw);
 	position: absolute;
 	border-radius: 3rem;
+  /*box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.8), 6px 20px 0 rgba(0, 0, 0, 0.79);
+	
+	*/
+
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px 10px; /*color inset shift blur radius */
+	
 }
 
 div.work-item > div.wrapper.hover {
 	/* Inner wrapper hover (Its a class because js dynamically hides the ul) */
 	width: 90%;
-	border: 3px solid #0cf574;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 40px 100px 20px;
+	/* border: 3px solid #0cf574;*/
 }
 
 div.work-item > div.wrapper.hover > div.content div.challenge-wrapper {
@@ -521,7 +540,7 @@ div#contact {
 	border-top: 5px solid #1ccad8;
 	z-index: 5;
 	width: 100%;
-	height: max(400px, 50vh);
+	height: max(400px, 60vh);
 	position: relative;
 }
 
@@ -531,7 +550,7 @@ div#textwrapper {
 	/* Text info container */
 	position: absolute;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 2fr 2fr;
+	grid-template-rows: 1fr 4fr;
 	display: grid;
 	height: 100%;
 	left: 50%;
@@ -543,7 +562,8 @@ div#textwrapper > * {
 }
 
 div#textwrapper h1,
-div#textwrapper p:not(.copied) {
+div#textwrapper p:not(.copied),
+div#textwrapper a {
 	/* Default text colour */
 	color: #1ccad8;
 }
@@ -560,7 +580,7 @@ div#textwrapper > div.contact.header > h1 {
 	color: #0cf574;
 	border-bottom: 3px solid #0cf574;
 	border-radius: 3px;
-	font-size: max(3.2rem, 20px);
+	font-size: max(4rem, 21px);
 }
 
 div#textwrapper > div.contact.soc::before {
@@ -581,21 +601,24 @@ div#textwrapper > div.contact.emails {
 	margin-bottom: 0;
 	grid-row: 2;
 	grid-column: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-div#textwrapper > div.contact > h1 {
+div#textwrapper > div.contact h1 {
 	/* Section headers */
-	font-size: max(3.5rem, 19px);
+	font-size: max(4rem, 22px);
 	margin-bottom: 1.5rem;
 }
 
-div#textwrapper > div.contact p.email:hover:not(.copied),
-div#textwrapper > div.contact > p.phone:hover:not(.copied) {
+div#textwrapper > div.contact p.email:hover:not(.copied) > a,
+div#textwrapper > div.contact p.phone:hover:not(.copied) {
 	/* Email and phone hover */
 	color: #0cf574 !important;
 	text-decoration-color: #0cf574;
 }
-p.email,
+p.email > a,
 p.phone {
 	/* Email and phone number */
 	text-decoration: underline;
@@ -608,18 +631,12 @@ p.copied,
 p.copied:hover {
 	/* Copied email or phone number */
 	color: #1a201a;
-	box-shadow: inset 0 min(-2.4rem, -15px) 0 0 #0cf574; /* very noice */
+	box-shadow: inset 0 min(-3.4rem, -21px) 0 0 #0cf574; /* very noice */
 }
 
-div#textwrapper > div.contact > p {
+div#textwrapper > div.contact p {
 	/* Section text (really just the emails) */
-	font-size: max(2rem, 12px);
-}
-
-div#textwrapper > div.contact.phones {
-	/* Phone section */
-	grid-row: 3;
-	grid-column: 1;
+	font-size: max(3rem, 18px);
 }
 
 /* socials */
@@ -627,7 +644,7 @@ div#textwrapper > div.contact.phones {
 div#textwrapper > div.contact.soc {
 	/* Socials section */
 	text-align: center;
-	grid-row: 2 / span 2;
+	grid-row: 2;
 	grid-column: 2;
 	position: relative;
 }
@@ -652,8 +669,8 @@ a.socials {
 svg.socials {
 	/* Social icons */
 	transition: all 0.5s ease-in-out;
-	width: 6rem;
-	height: 6rem;
+	width: 10rem;
+	height: 10rem;
 }
 
 svg.socials:hover {

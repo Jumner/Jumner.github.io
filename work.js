@@ -79,19 +79,16 @@ class project {
 
 let projects = [
 	new project(
-		'My portfolio website',
-		'The website that you are looking at right now! I spent a long time making it look good and convey a message that I was happy with. This project has a lot of front end development and a bit of backend development to handle the form in the contact me section. This was mainly a way to freshen up my web development skills and create a good place to put my work.',
-		[
-			'I often struggle at the actual design aspect as you might know from my old website. I spent a lot of time laying this one out and learning the actual techniques to make this one as good as I can.',
-			'It might sound pretty trivial, but I had to put a year and month on every computer related event in my life. A lot of looking at old pictures, emails, and accounts.',
-			'I learned a lot of tips and tricks of making a website. I always wondered why many websites use so many divs. Now I know, the way that things are positioned on the page is much easier when you surround everything in 20 divs!',
-		],
-		'<iframe src="index.html" style="border:none;" width="100%" height="100%" title="My website IN my website!"></iframe>'
+		'Queen\'s Autdrive',
+		'I\'m the controls lead for Queen\'s Autodrive, where we compete with 9 other teams across North America to convert a Chevrolet Bolt into an SAE level-4 autonomous vehicle.',
+		['Large scale project management and collaborative engineering.', 'Controller verification with software in the loop (SIL).', 'A wide variety of Mathworks tools including Matlab, Simulink, Roadrunner.', 'Integrating Simulink systems with ROS2.'],
+		'<div class="space-wrapper" style="background-image: url(\'https://autodrive.engineering.queensu.ca/images/about-img-three.png\')">',
+		'https://autodrive.engineering.queensu.ca/'
 	),
 	new project(
 		'Cubic',
-		'Inspired but Cubli, I designed, build and programmed a cube that can balance itself using 3 reaction wheels. This project is what convinced me to go into mechatronics engineering and pursue contorl. I learned a lot about linear optimal control even though I only used PID. I plan on updating it with a better controller using stability analysis.',
-		['Embedded C++ programming (with Arduino)', 'Communication Protocols (Spi, I2C, Serial)', 'Application of Control and PID tuning', 'Design and assembly of complex structures', 'Project management'],
+		'Inspired but Cubli, I designed, build and programmed a cube that can balance itself using 3 reaction wheels. After over 2 years of work (with a lot of breaks), I finally got it balancing on the corner. This project is what convinced me to go into Mechatronics engineering and pursue control. I learned an incredible amount about classical and modern controls even though I only ended up using PID. This project was a rolercoaster of emotions and I can\'t wait to take up another project of this scale.',
+		['Embedded C++ programming (with Arduino), embedded Rust programming (hal).', 'Communication Protocols (Spi, I2C, Serial), using sensors and actuators.', 'Application of Control, stability analysis, state estimation, linear optimal control, and PID tuning.', 'Design and manufacturing of complex assemblies.', 'Project management, planning, and perseverance.'],
 		'<div class="space-wrapper" style="background-image: url(\'https://user-images.githubusercontent.com/69999075/175431668-324ac41d-5c04-4bda-bd9f-c9cc0a512682.jpg\')">',
 		'https://github.com/Jumner/cubicFirmware'
 	),
@@ -105,5 +102,15 @@ let projects = [
 		],
 		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">',
 		'https://github.com/Jumner/TuringVscode'
+	),
+	new project(
+		'My portfolio website',
+		'The website that you are looking at right now! I spent a long time making it look good and convey a message that I was happy with. This project has a lot of front end development and a bit of backend development to handle the form in the contact me section. This was mainly a way to freshen up my web development skills and create a good place to put my work.',
+		[
+			'I often struggle at the actual design aspect as you might know from my old website. I spent a lot of time laying this one out and learning the actual techniques to make this one as good as I can.',
+			'It might sound pretty trivial, but I had to put a year and month on every computer related event in my life. A lot of looking at old pictures, emails, and accounts.',
+			'I learned a lot of tips and tricks of making a website. I always wondered why many websites use so many divs. Now I know, the way that things are positioned on the page is much easier when you surround everything in 20 divs!',
+		],
+		'<iframe src="index.html" style="border:none;" width="100%" height="100%" title="My website IN my website!"></iframe>'
 	),
 ];

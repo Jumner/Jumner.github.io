@@ -99,10 +99,17 @@ window.onload = () => {
 		aboutHr.style.right = percent;
 		// Project h1 fade
 		const projectH1 = document.getElementById('aboutProjectH1');
-		percent = 1.5 * window.innerHeight - scroll;
-		percent = Math.pow(Math.max(percent, 0), 1.2);
-		percent = clamp(percent, 0, window.innerHeight / 2);
-		projectH1.style.top = percent + 'px';
+		const projectP = document.getElementById('aboutProjectP');
+		let getPercent = (val) => {
+			let percent = val * window.innerHeight - scroll;
+			percent = Math.pow(Math.max(percent, 0), 1.2);
+			percent = clamp(percent, 0, window.innerHeight / 2);
+			return percent;
+		}
+		let h1Percent = getPercent(1.4);
+		let pPercent = getPercent(1.45);
+		projectH1.style.top = h1Percent + 'px';
+		projectP.style.top = pPercent + 'px';
 		// Projects slide in
 		const rows = [...document.getElementsByClassName('project-row')];
 		percent =
@@ -169,7 +176,13 @@ window.onload = () => {
 	let start = new Date('July 1, 2013'); // Not an exact date but I learned in the summer and have emails with my awesome grandpa from early 2014
 	let diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
 	years.innerHTML = Math.floor(diff);
-
+	// Uni year handling
+	let uniyear = document.getElementById('uniyear');
+	start = new Date('September 1 2022');
+	diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+	let yearNames = ['first', 'second', 'third', 'on internship before my fourth', 'fourth'];
+	uniyear.innerHTML = yearNames[Math.floor(diff)];
+	
 	// Project handling
 	let container = document.getElementById('projects');
 	let cells = [];
@@ -197,7 +210,7 @@ window.onload = () => {
 	}
 
 	// Link socials
-	const socials = ['https://github.com/Jumner', '', ''];
+	const socials = ['https://github.com/Jumner', 'https://www.linkedin.com/in/justin-frank-497aa521b/'];
 	const socialSvg = [...document.getElementsByClassName('socials')]; // This is awesome
 	socialSvg.forEach((svg, i) => {
 		svg.outerHTML = `<a href="${socials[i]}" class="socials" target="_blank">${svg.outerHTML}</a>`;
@@ -205,7 +218,6 @@ window.onload = () => {
 
 	// Copy email and phone number
 	let data = [
-		...document.getElementsByClassName('email'),
 		...document.getElementsByClassName('phone'),
 	];
 	data.forEach(element => {

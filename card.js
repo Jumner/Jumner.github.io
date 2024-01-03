@@ -93,7 +93,7 @@ let cards = [
 	),
 	new card(
 		'February 2018',
-		'After reading that Spacex uses c++ for their software, I thought that I would want to find out why. Turns out its really robust and my favorite language.'
+		'After reading that Spacex uses c++ for their software, I thought that I would want to find out why. Turns out its really robust and my second favorite language.'
 	),
 	new card(
 		'April 2018',
@@ -136,6 +136,10 @@ let cards = [
 		"To challenge myself, I also created a simple 3d wireframe engine in a dated language called Turing. I wasn't sure that Turing was fast enough but it was."
 	),
 	new card(
+		'October 2020',
+		'Used a Raspberry Pi and a webcam to turn my highschool robotics robot autonomous using OpenCV. Unfortunately the Pi Zero was too slow to be practical.'
+	),
+	new card(
 		'November 2020',
 		'I learned how modular linux can be. I always loved development in linux and I never realized that it can look nicer than windows. I now use it for almost everything.'
 	),
@@ -146,5 +150,85 @@ let cards = [
 	new card(
 		'May 2021',
 		"I made an extension for a code editor called Vscode. It adds support for a language called Turing. It wasn't perfect, but it was about as close as I could get."
+	),
+	new card(
+		'August 2021',
+		'Started Cubic. Though I didn\'t know it at the time, this would be incredibly difficult, consume my life, and span over 2 years.'
+	),
+	new card(
+		'September 2021',
+		'Designed Cubic in Fusion360. This was a tough challenge as the cube is larger than my 3d printers print area.'
+	),
+	new card(
+		'October 2021',
+		'Started learning the Rust programming language. It is now by far my favorite language.'
+	),
+	new card(
+		'October 2021',
+		'Designed a printed circuit board based on the esp32 for Cubic in just 1 week. Probably should have spent longer because I underspeced the power supply circuitry.'
+	),
+	new card(
+		'October 2021',
+		'Used an Electron like framework called Tauri to make a user interface for Cubic but I moved away from the esp32 so I had no wireless connectivity.'
+	),
+	new card(
+		'November 2021',
+		'I worked with a friend to make our school\' hackaton website in just one weekend. This was my first experience of collaborative development and it was super smooth.'
+	),
+	new card(
+		'November 2021',
+		'Learned embedded programming using Rust and got PWM, and I2C working for my cube. Software interrupts got me stuck so I went to arduino.'
+	),
+	new card(
+		'November 2021',
+		'Got my Cubic motors spinning with tachometer readings using the datasheet.'
+	),
+	new card(
+		'Novmeber 2021',
+		'Taught myself state space modelling and modelled my inverted pendulum, Cubic.'
+	),
+	new card(
+		'December 2021',
+		'First assembled Cubic with nearly 100 3d printed parts. Then I characterized the motors so I could have consistent torque output.'
+	),
+	new card(
+		'December 2021',
+		'Learned about Kalman filters but discovered that the atmega328p does not have enough memory to hold the matrices.'
+	),
+	new card(
+		'February 2022',
+		'Made a simple todo app to understand cli using clap.',
+	),
+	new card(
+		'February 2022',
+		'Tried to make an obsidian plugin that adds geogebra so I could have interactive applets in my notes. Storing the data was difficult and caused a big headache.'
+	),
+	new card(
+		'April 2022',
+		'Made a GPT-3 API wrapper in rust. This allowed me to use the LLM and adjust its parameters from the comamnd line.',
+	),
+	new card(
+		'April 2022',
+		'Made a bot that solves that test tube pour sorting mobile game. Written in rust, I am very proud of the algorithm I made. I also got used to testing.'
+	),
+	new card(
+		'April 2022',
+		'Wrote a cli application where I can give it a program that I need but will forget about next time I reinstall and it saves it to a file and can reinstall it automatically.'
+	),
+	new card(
+		'June 2022',
+		'Finally got Cubic balancing on one edge. The corner proved to be much more difficult.'
+	),
+	new card(
+		'January 2023',
+		'Competed in the Queen\'s Engineering Competition and wrote a discord bot that plays audiobooks and autotranscribes them.'
+	),
+	new card(
+		'January 2023',
+		'Wrote a discord bot with a friend that stores the courses for each engineering discipline. So the user picks their discipline and gets access to their courses.'
+	),
+	new card(
+		'August 2023',
+		'Wrote a TUI application in rust that does a type of brain game called dual-n-back. I learned a lot about the structuring of applications and TUI.'
 	),
 ];
