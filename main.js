@@ -150,11 +150,12 @@ window.onload = () => {
 			percent = clamp(Math.pow(Math.max(percent, 0), 1.2), 0, 1);
 			card.style.opacity = percent;
 		});
-		// // contact page effects
+		// contact page effects
 		const text = document.getElementById('soc');
+		const contact = document.getElementById('contact');
 		percent =
-			(window.innerHeight - text.getBoundingClientRect().y) /
-			(window.innerHeight / 3);
+			(window.innerHeight - text.getBoundingClientRect().y - contact.getBoundingClientRect().height/3) /
+			(window.innerHeight / 5);
 		percent = clamp(Math.pow(Math.max(percent, 0), 1.3), 0, 1);
 		animationStyle.innerHTML = `div#textwrapper > div.contact.soc::before {height: ${Math.floor(
 			70 * percent
@@ -216,7 +217,7 @@ window.onload = () => {
 		svg.outerHTML = `<a href="${socials[i]}" class="socials" target="_blank">${svg.outerHTML}</a>`;
 	});
 
-	// Copy email and phone number
+	// Copy phone number
 	let data = [
 		...document.getElementsByClassName('phone'),
 	];
