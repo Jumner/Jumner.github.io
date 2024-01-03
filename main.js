@@ -195,15 +195,16 @@ window.onload = () => {
 			let cell = document.createElement('div');
 			cell.className = 'project-cell';
 			cell.appendChild(cards.random().element);
+			cell.firstElementChild.style.visibility = 'visible'; // Hidden by default for flip animation
 			cell.on = true;
 			flip(cell); // enables flipping
 			cell.onmouseenter = e => {
 				e.target.on = false;
-				clearTimeout(e.target.timeout);
+				clearTimeout(e.target.timeout); // Clear the flip timeout so they don't build up.
 			};
 			cell.onmouseleave = e => {
 				e.target.on = true;
-				flip(e.target);
+				flip(e.target); // Make sure it starts flipping again.
 			};
 			row.appendChild(cell);
 			cells.push(cell);
@@ -242,18 +243,26 @@ function flip(cell) {
 	cell.timeout = setTimeout(() => {
 		if (!cell.on) return; // Make sure it wont flip if being hovered
 		cell.style.transform = 'rotateX(90deg)';
+		let oldHtml = cell.innerHTML;
+		cell.appendChild(
+			cards
+				.filter(card => {
+					return oldHtml !== card.html; // filter out the same card so no repeats
+				})
+				.random().element
+		);
 		setTimeout(() => {
-			let oldHtml = cell.innerHTML;
-			cell.innerHTML = ''; // Clear past card
-			cell.appendChild(
-				cards
-					.filter(card => {
-						return oldHtml !== card.html; // filter out the same card so no repeats
-					})
-					.random().element
-			);
+			cell.removeChild(cell.firstElementChild);
+			cell.firstElementChild.style.visibility = 'visible';
 			flip(cell);
-			cell.style.transform = '';
+			cell.style.transform = 'rotateX(0deg)';
 		}, 500);
 	}, 10000 + 10000 * Math.random());
+}
+
+function setTopRightBottomLeft(element, value) {
+	element.style.top = value;
+	element.style.right = value;
+	element.style.bottom = value;
+	element.style.left = value;
 }

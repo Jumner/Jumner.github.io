@@ -256,9 +256,10 @@ div#projects > div.project-row {
 
 div#projects > div.project-row > div.project-cell {
 	/* Each individual card */
-	transition: transform 0.5s ease;
+	transition: transform 0.5s ease-in-out;
 	display: table-cell;
 	position: relative;
+  backface-visibility: hidden;
 }
 
 /* cards */

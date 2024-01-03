@@ -22,6 +22,8 @@ class card {
 		bot.appendChild(desc);
 		card.appendChild(top);
 		card.appendChild(bot);
+		card.style.visibility = 'hidden';
+		// card.style.transform = 'rotateX(180deg)'
 		return card;
 	}
 
