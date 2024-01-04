@@ -69,7 +69,8 @@ window.onresize = () => {
 	resize();
 };
 
-document.onload = () => {
+function loadPage() {
+	console.log("loaded");
 	const animationStyle = document.createElement('style');
 	document.head.appendChild(animationStyle);
 	// Wait for page to load
@@ -249,7 +250,8 @@ document.onload = () => {
 			}, 1500);
 		};
 	});
-};
+}
+loadPage();
 
 function flip(cell) {
 	cell.timeout = setTimeout(() => {
