@@ -32,6 +32,7 @@ class card {
 	}
 }
 
+// Longest card is index 27
 let cards = [
 	new card(
 		'July 2013',

@@ -19,6 +19,42 @@ Array.prototype.random = function () {
 	return this[Math.floor(Math.random() * this.length)];
 };
 
+function handleProjects() {
+	let container = document.getElementById('projects');
+	if (!container) return;
+	container.innerHTML = '';
+	let cells = [];
+	let width = Math.floor(window.innerWidth / 250);
+	let aspect = window.innerWidth / window.innerHeight;
+	height = Math.round(0.8 * width / aspect); // Finally got this nice
+	width = Math.max(Math.min(width,3), 2);
+	height = Math.max(Math.min(height,3), 1);
+	for (let y = 0; y < height; y++) {
+		let row = document.createElement('div');
+		row.className = 'project-row';
+		container.appendChild(row);
+		for (let x = 0; x < width; x++) {
+			let cell = document.createElement('div');
+			cell.className = 'project-cell';
+			cell.appendChild(cards.random().element); // Longest is index 27
+			cell.firstElementChild.style.visibility = 'visible'; // Hidden by default for flip animation
+			cell.on = true;
+			flip(cell); // enables flipping
+			cell.onmouseenter = e => {
+				e.target.on = false;
+				clearTimeout(e.target.timeout); // Clear the flip timeout so they don't build up.
+			};
+			cell.onmouseleave = e => {
+				e.target.on = true;
+				flip(e.target); // Make sure it starts flipping again.
+			};
+			row.appendChild(cell);
+			cells.push(cell);
+		}
+	}
+}
+
+
 function resize() {
 	// Set font size
 	// const area = window.innerWidth * window.innerHeight;
@@ -26,7 +62,7 @@ function resize() {
 	// 	Math.round(10 * Math.sqrt(area / 1787520)) + 'px'; // Set default font size (sorry accessability)
 	document.documentElement.style.fontSize =
 		10 * Math.pow((window.innerWidth + window.innerHeight) / 3000, 0.8) + 'px';
-	console.log(document.documentElement.style.fo1ntSize);
+	handleProjects();
 }
 
 window.onresize = () => {
@@ -125,8 +161,8 @@ window.onload = () => {
 			window.innerWidth / 2 + rows[0].getBoundingClientRect().width / 2
 		);
 		rows.forEach((row, i) => {
-			const sign = 2 * i - 1;
-			row.style.left = percent * sign + 'px';
+			const sign = i % 2 === 0 ? -1 : 1;
+			row.style.left = (percent) * sign + 'px';
 		});
 		// My work header and text
 		const workHead = document.getElementById('work-header');
@@ -185,31 +221,7 @@ window.onload = () => {
 	uniyear.innerHTML = yearNames[Math.floor(diff)];
 	
 	// Project handling
-	let container = document.getElementById('projects');
-	let cells = [];
-	for (let y = 0; y < 2; y++) {
-		let row = document.createElement('div');
-		row.className = 'project-row';
-		container.appendChild(row);
-		for (let x = 0; x < 3; x++) {
-			let cell = document.createElement('div');
-			cell.className = 'project-cell';
-			cell.appendChild(cards.random().element);
-			cell.firstElementChild.style.visibility = 'visible'; // Hidden by default for flip animation
-			cell.on = true;
-			flip(cell); // enables flipping
-			cell.onmouseenter = e => {
-				e.target.on = false;
-				clearTimeout(e.target.timeout); // Clear the flip timeout so they don't build up.
-			};
-			cell.onmouseleave = e => {
-				e.target.on = true;
-				flip(e.target); // Make sure it starts flipping again.
-			};
-			row.appendChild(cell);
-			cells.push(cell);
-		}
-	}
+	handleProjects(); // Fn so it can be ran on resize
 
 	// Link socials
 	const socials = ['https://github.com/Jumner', 'https://www.linkedin.com/in/justin-frank-497aa521b/'];

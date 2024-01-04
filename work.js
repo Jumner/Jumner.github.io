@@ -82,14 +82,14 @@ let projects = [
 		'Queen\'s Autdrive',
 		'I\'m the controls lead for Queen\'s Autodrive. Autodrive is an engineering competition to convert a Chevrolet Bolt into an SAE level-4 autonomous vehicle. As one of 10 teams selected to compete, I am very honoured to lead the controls aspect of this project. Collaboratively working hands on in a project of this scale has taught me an incredible amount about real engineering.',
 		['Large scale project management and collaborative engineering.', 'How to lead a team of engineers to efficiently acheive a goal.', 'Controller verification with software in the loop (SIL).', 'A wide variety of Mathworks tools including Matlab, Simulink, Roadrunner.', 'Integrating complex and interconnected Simulink systems with ROS2.'],
-		'<div class="space-wrapper" style="background-image: url(\'https://autodrive.engineering.queensu.ca/images/about-img-three.png\')">',
+		'<div class="space-wrapper"><img src="https://autodrive.engineering.queensu.ca/images/about-img-three.png" /></div>',
 		'https://autodrive.engineering.queensu.ca/'
 	),
 	new project(
 		'Cubic',
 		'Inspired but Cubli, I designed, build and programmed a cube that can balance itself using 3 reaction wheels. After over 2 years of work (with a lot of breaks), I finally got it balancing on the corner. This project is what convinced me to go into Mechatronics engineering and pursue controls. I learned an incredible amount about classical and modern controls even though I only ended up using PID. This project was a rolercoaster of emotions and I can\'t wait to take up another project of this scale.',
 		['Embedded C++ programming (with Arduino), embedded Rust programming (hal).', 'Communication Protocols (Spi, I2C, Serial), using sensors and actuators.', 'The application of control, stability analysis, state estimation, linear optimal control, and PID tuning.', 'Design and manufacturing of complex assemblies with hundreds of parts.', 'Project management, planning, and extreme perseverance.'],
-		'<div class="space-wrapper" style="background-image: url(\'https://user-images.githubusercontent.com/69999075/175431668-324ac41d-5c04-4bda-bd9f-c9cc0a512682.jpg\')">',
+		'<div class="space-wrapper"><img src="https://user-images.githubusercontent.com/69999075/175431668-324ac41d-5c04-4bda-bd9f-c9cc0a512682.jpg" /></div>',
 		'https://github.com/Jumner/cubicFirmware'
 	),
 	new project(
@@ -100,7 +100,7 @@ let projects = [
 			'How Language Server Protocols (LSP) work. I always took it for granted but not anymore.',
 			'The dangers of scope creep and its repercusions on a project. This project started with a tiny scope which grew orders of magnitude. This resulted in terrible code that could use a lot of refractoring. In hindsight, I should have just bit the bullet and written a language server.',
 		],
-		'<div class="space-wrapper" style="background-image: url(\'img/Example.gif\')">',
+		'<div class="space-wrapper"><img src="img/Example.gif" /></div>',
 		'https://github.com/Jumner/TuringVscode'
 	),
 	new project(
