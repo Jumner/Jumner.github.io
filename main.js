@@ -27,7 +27,7 @@ function handleProjects() {
 	let width = Math.floor(window.innerWidth / 250);
 	let aspect = window.innerWidth / window.innerHeight;
 	width = Math.max(Math.min(width,3), 2);
-	height = Math.round(1.6 * width / aspect); // Finally got this nice
+	height = Math.round(1.1 * width / aspect); // Finally got this nice
 	height = Math.max(Math.min(height,3), 1);
 	for (let y = 0; y < height; y++) {
 		let row = document.createElement('div');
