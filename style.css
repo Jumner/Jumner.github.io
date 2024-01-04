@@ -606,6 +606,7 @@ div#textwrapper > div.contact.soc::before {
 	border-radius: 2px;
 	top: 50%;
 	transform: translateY(-50%);
+	transition: All 0.2s;
 	height: 70%;
 	left: -4rem;
 	position: absolute;

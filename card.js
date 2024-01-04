@@ -100,7 +100,7 @@ let cards = [
 	),
 	new card(
 		'April 2018',
-		'I learned about ray tracing and was still hooked on making my own 3d renderer. I learned a alot of geometry before realizing that it was very difficult.'
+		'I learned about ray tracing and wanted to make my own raytracer. I learned a alot of geometry before realizing what I got myself into.'
 	),
 	new card(
 		'May 2018',

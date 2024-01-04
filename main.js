@@ -26,8 +26,8 @@ function handleProjects() {
 	let cells = [];
 	let width = Math.floor(window.innerWidth / 250);
 	let aspect = window.innerWidth / window.innerHeight;
-	height = Math.round(0.8 * width / aspect); // Finally got this nice
 	width = Math.max(Math.min(width,3), 2);
+	height = Math.round(1.6 * width / aspect); // Finally got this nice
 	height = Math.max(Math.min(height,3), 1);
 	for (let y = 0; y < height; y++) {
 		let row = document.createElement('div');
@@ -57,9 +57,6 @@ function handleProjects() {
 
 function resize() {
 	// Set font size
-	// const area = window.innerWidth * window.innerHeight;
-	// document.documentElement.style.fontSize =
-	// 	Math.round(10 * Math.sqrt(area / 1787520)) + 'px'; // Set default font size (sorry accessability)
 	document.documentElement.style.fontSize =
 		10 * Math.pow((window.innerWidth + window.innerHeight) / 3000, 0.8) + 'px';
 	handleProjects();
