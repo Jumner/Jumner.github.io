@@ -59,6 +59,11 @@ function resize() {
 	// Set font size
 	document.documentElement.style.fontSize =
 		10 * Math.pow((window.innerWidth + window.innerHeight) / 3000, 0.8) + 'px';
+	if (window.innerHeight > window.innerWidth) {
+		// Mobile sucks lmao
+		// Don't make me use the nuclear option
+		// document.documentElement.style.fontSize = '2px';
+	}
 	handleProjects();
 }
 

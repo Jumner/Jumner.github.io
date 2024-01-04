@@ -190,14 +190,14 @@ h1.abouth1 {
 p#aboutProjectP {
 	/* The project header text */
 	text-align: center;
-	font-size: max(2.4rem, 16px);
+	font-size: 2.4rem;
 	margin: 20px;
 	margin-bottom: 20px;
 }
 div#aboutme > div > p {
 	/* Little Things header text */
 	position: relative;
-	font-size: max(2.4rem, 16px);
+	font-size: 2.4rem;
 	margin: 20px;
 }
 
@@ -211,7 +211,7 @@ div#aboutme > div.section > div.wrapper {
 div#aboutme > div.section > div.wrapper > p {
 	/* Paragraph in about me text section */
 	padding: 2rem;
-	font-size: max(3.3rem, 22px);
+	font-size: 3.3rem;
 	background-clip: text;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
@@ -379,7 +379,7 @@ div#work-header > * {
 
 div#work-header > p {
 	/* Work header text */
-	font-size: max(2.4rem, 16px);
+	font-size: 2.4rem;
 	margin: 20px;
 }
 
@@ -428,7 +428,7 @@ div.work-item > div.wrapper.hover > div.content div.info-wrapper p {
 div.work-item > div.wrapper > div.content div.info-wrapper p {
 	/* Main text */
 	margin: min(1rem, 30px);
-	font-size: max(2.6rem, 15px);
+	font-size: 2.6rem;
 }
 
 div.work-item > div.wrapper.hover > div.content div.info-wrapper h1 {
