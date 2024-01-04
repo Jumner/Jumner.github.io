@@ -62,7 +62,7 @@ function resize() {
 	if (window.innerHeight > window.innerWidth) {
 		// Mobile sucks lmao
 		// Don't make me use the nuclear option
-		// document.documentElement.style.fontSize = '2px';
+		document.documentElement.style.fontSize = '5px';
 	}
 	handleProjects();
 }
