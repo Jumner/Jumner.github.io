@@ -152,12 +152,12 @@ div#hometext > h1 {
 
 div#hometext > h2 {
 	/* Inner medium */
-	font-size: max(4rem, 24px);
+	font-size: 4rem;
 }
 
 div#hometext > p {
 	/* Inner small */
-	font-size: max(2rem, 12px);
+	font-size: 2rem;
 }
 
 /* Page 2 - About Me */
@@ -595,7 +595,7 @@ div#textwrapper > div.contact.header > h1 {
 	color: #0cf574;
 	border-bottom: 3px solid #0cf574;
 	border-radius: 3px;
-	font-size: max(4rem, 21px);
+	font-size: 4rem;
 }
 
 div#textwrapper > div.contact.soc::before {

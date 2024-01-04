@@ -26,7 +26,7 @@ function handleProjects() {
 	let cells = [];
 	let width = Math.floor(window.innerWidth / 250);
 	let aspect = window.innerWidth / window.innerHeight;
-	width = Math.max(Math.min(width,3), 2);
+	width =  Math.max(Math.min(width,(aspect < 1) ? 2 : 3), 2);
 	height = Math.round(1.1 * width / aspect); // Finally got this nice
 	height = Math.max(Math.min(height,3), 1);
 	for (let y = 0; y < height; y++) {
@@ -62,7 +62,7 @@ function resize() {
 	if (window.innerHeight > window.innerWidth) {
 		// Mobile sucks lmao
 		// Don't make me use the nuclear option
-		document.documentElement.style.fontSize = '5px';
+		// document.documentElement.style.fontSize = '2.5px';
 	}
 	handleProjects();
 }
