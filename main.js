@@ -69,7 +69,7 @@ window.onresize = () => {
 	resize();
 };
 
-window.onload = () => {
+document.onload = () => {
 	const animationStyle = document.createElement('style');
 	document.head.appendChild(animationStyle);
 	// Wait for page to load
