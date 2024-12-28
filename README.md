@@ -22,13 +22,13 @@ The [img](https://github.com/Jumner/Jumner.github.io/tree/main/img) directory co
 
 [card.js](https://github.com/Jumner/Jumner.github.io/blob/main/card.js) contains a class for defining the little cards. This allows me to simply provide the title and description and it describes how to build the DOM object. It also defines the list of all them at the bottom so if you wanted to add one, that's where it would go.
 
-![](README/cards.png)
+![](img/README/cards.png)
 
 ### work.js
 
 [work.js](https://github.com/Jumner/Jumner.github.io/blob/main/work.js) contains the class for defining my projects. I explicitly excluded class projects and job positions as that is what my resume is for. This allows me to provide the project information and it will automatically construct the DOM object. It also defines the list of all projects at the bottoms so if you wanted to add one, that's where it would go.
 
-![](README/work.jpeg)
+![](img/README/work.jpeg)
 
 ### main.js
 
