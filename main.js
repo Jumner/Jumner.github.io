@@ -227,7 +227,7 @@ function loadPage() {
 	handleProjects(); // Fn so it can be ran on resize
 
 	// Link socials
-	const socials = ['https://github.com/Jumner', 'https://www.linkedin.com/in/justin-frank-497aa521b/'];
+	const socials = ['https://github.com/Jumner', 'https://www.linkedin.com/in/jt-frank/'];
 	const socialSvg = [...document.getElementsByClassName('socials')]; // This is awesome
 	socialSvg.forEach((svg, i) => {
 		svg.outerHTML = `<a href="${socials[i]}" class="socials" target="_blank">${svg.outerHTML}</a>`;
