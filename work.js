@@ -82,7 +82,7 @@ let projects = [
 		'Queen\'s AutDrive',
 		'Being the director of Autonomy has been an incredibly transformative experience. It\'s one thing to see a bunch of names and another to watch 50 people learn and grow. In spite of the adversity we faced, last year we managed to get 3rd in the Intersection Challenge through nothing short of technical miracles. We found our limit, and we\'re pushing past it this year. All I will say is the miracles haven\'t been slowing down...',
 		['Large scale project management and collaborative engineering', 'Proper documentation and keeping documents up to date even when moving rapidly', 'Directing a division of 6 leads and over 50 members', 'Controller verification with software in the loop (SIL)','Designing an incredibly complex system by carefully choosing which systems to couple and decouple', 'Simulation in CARLA with automated test cases'],
-		'<div class="space-wrapper"><img src="https://autodrive.engineering.queensu.ca/images/about-img-three.png" /></div>',
+		'<div class="space-wrapper"><img src="https://raw.githubusercontent.com/Jumner/Jumner/refs/heads/main/img/the_monarch.jpg" /></div>',
 		'https://autodrive.engineering.queensu.ca/'
 	),
 	new project(
